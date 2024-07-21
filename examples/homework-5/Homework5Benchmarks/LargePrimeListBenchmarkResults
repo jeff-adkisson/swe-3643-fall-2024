@@ -1,0 +1,9 @@
+### First 100,000 primes
+
+### Copy results to https://chartbenchmark.net/ to visualize
+
+| Method                                                    | Mean        | Error    | StdDev   | Gen0    | Gen1    | Gen2    | Allocated |
+|---------------------------------------------------------- |------------:|---------:|---------:|--------:|--------:|--------:|----------:|
+| Homework5Original_GetLargePrimeList                       | 3,713.93 ms | 6.135 ms | 5.739 ms |       - |       - |       - | 391.37 KB |
+| Homework5Refactored_GetLargePrimeList                     |    21.30 ms | 0.040 ms | 0.036 ms | 93.7500 | 93.7500 | 93.7500 | 390.73 KB |
+| Homework5RefactoredSingleResponsibility_GetLargePrimeList |    21.00 ms | 0.031 ms | 0.027 ms | 93.7500 | 93.7500 | 93.7500 | 390.73 KB |
