@@ -1,8 +1,6 @@
 # SWE 3643: Testing and Quality Assurance, Fall 2024
 
-[**Textbook PDF for Midterm**](textbook.pdf)
-
-This repository contains project information and code samples for KSU SWE 3643: Software Testing and Quality Assurance, Spring 2024.
+This repository contains project information and code samples for KSU SWE 3643: Software Testing and Quality Assurance, Fall 2024.
 
 #### To Clone This Repository
 
@@ -14,12 +12,23 @@ This repository contains project information and code samples for KSU SWE 3643: 
 
     `git clone https://github.com/jeff-adkisson/swe-3643-fall-2024.git`
 
-#### Contents
+#### Course Documents
+- [Syllabus / docx](course/swe-3643-syllabus-adkisson-spring-2024.docx)
+- [Introduction Presentation / pptx](course/introduction-lecture.pptx)
+- [Textbook / pdf](course/textbook.pdf)
 
-1.  **Semester Project Documentation**
-    -  [Overview](project/README.md)
-    -  [Requirements](project/requirements.md)
-    -  [Grading Rubric](project/grading-rubric.md)
-2.  **Examples**
-    -  [Test Coverage Demo](examples/coverage_demo/README.md): Wed Jan 24, 2024
-    -  [Assignment 2 Code](examples/assignment-2/Assignment2/Program.cs): Wed Feb 7, 2024
+[//]: # (#### Contents)
+
+[//]: # (1.  **Semester Project Documentation**)
+
+[//]: # (    -  [Overview]&#40;project/README.md&#41;)
+
+[//]: # (    -  [Requirements]&#40;project/requirements.md&#41;)
+
+[//]: # (    -  [Grading Rubric]&#40;project/grading-rubric.md&#41;)
+
+[//]: # (2.  **Examples**)
+
+[//]: # (    -  [Test Coverage Demo]&#40;examples/coverage_demo/README.md&#41;: Wed Jan 24, 2024)
+
+[//]: # (    -  [Assignment 2 Code]&#40;examples/assignment-2/Assignment2/Program.cs&#41;: Wed Feb 7, 2024)
