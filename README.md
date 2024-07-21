@@ -1,4 +1,4 @@
-# SWE 3643: Testing and Quality Assurance
+# SWE 3643: Testing and Quality Assurance, Fall 2024
 
 [**Textbook PDF for Midterm**](textbook.pdf)
 
@@ -12,7 +12,7 @@ This repository contains project information and code samples for KSU SWE 3643: 
 
 3.  Execute the following command:
 
-    `git clone https://github.com/jeff-adkisson/swe-3643-spring-2024.git`
+    `git clone https://github.com/jeff-adkisson/swe-3643-fall-2024.git`
 
 #### Contents
 
