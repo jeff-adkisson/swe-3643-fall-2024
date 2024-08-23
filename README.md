@@ -17,6 +17,10 @@ This repository contains project information and code samples for KSU SWE 3643: 
 - [Introduction Presentation / pptx](course/introduction-lecture.pptx)
 - [Textbook / pdf](course/textbook.pdf)
 
+#### Homework (not graded, but *highly highly highly* recommended you perform it)
+
+- [Homework 1](homework/homework-1.md) 
+
 [//]: # (#### Contents)
 
 [//]: # (1.  **Semester Project Documentation**)
