@@ -2,13 +2,27 @@
 
 This first exercise is to get you accustomed to writing simple unit tests in the language of your choice and committing your code to your GitHub repo. This exercise is not graded. This exercise will help you prepare your environment for the semester project. 
 
+**NOT GRADED! WHY SHOULD I BOTHER?**
+
+You must learn how to do the work. Therefore, the work is its own reward. Also, this work will prepare you for the project and that is 50% of your grade. If you do not do the homework, you will struggle to complete the project.
+
+You must become proficient at these topics to be competitive in the industry. If you want to find work quickly after graduation, you must be technically proficient. Grades without the skills to back them up mean nothing in the real world.
+
+## Parts
+
 The homework has two parts:
 
 - Configure and use Git and GitHub
   *Source control is an essential software engineering skill. We will make use of `git`* and GitHub all semester.
 - Write a small unit test in the language of your choice, then commit it to `git` and push the commit to GitHub.
 
+## Optional
+
 The final section is optional. It has some extra exercises I recommend if you have time. It covers how to clone your repo using the command line tools and how to run your unit tests from the command line. Developing proficiency using the command line is both instructive and helps differentiate you from less skilled developers who are entirely reliant on an IDE or graphical tool.
+
+## Written Homework 1 from Prior Semesters
+
+I have also provided the original written Homework 1 from prior semesters. We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.
 
 ## Part 1: Git and GitHub
 
@@ -274,3 +288,17 @@ You might have noticed that C#, Java, and Python all operate a bit different. Ea
 I recommend learning at least C# or Java *plus* Python (which is very different from C#/Java).
 
 C# and Java are heavily used in enterprise applications. Python is essential for machine learning and data science. All three provide outstanding employment opportunities. Having some confidence in at least one object-oriented language (C#/Java) and one dynamic language (Python) is a great way to build your skill set as you enter the job market.
+
+## Written Homework 1 from Prior Semesters
+
+*This is the original homework 1 for this course. We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.*
+
+This assignment is aimed at assessing your understanding of the notion of quality and different measuring techniques that we can use to evaluate product quality in software testing. 
+
+1. A company uses the following metric to gauge product quality. Once a bug is reported, that same bug is closed if it cannot be recreated by the testing team. Naturally, this lead to a high defect fix rate. Based on what you’ve learned in Chapter 17, concisely identify at least two problems with this approach. As the testing manager, how would you modify this plan to more accurately reflect product quality?
+2. Dijkstra asserts that “Program testing can be used to show the presence of bugs, but never to show their absence!” Explain this statement. Provide one real world example that is not related to computing.
+3. What is Software Quality? How do you know when the software provided is considered good software? And how do you know that an update is better than the previous version? 
+
+4. You are assigned the task of creating a program that adds two two-digit integers. Can you test the program exhaustively? If so, how many test cases are required? Assuming that each test case can be executed and analyzed in one second, how long would it take for you to run all of the tests? Fully explain your answer, along with all assumptions. No credit will be given for answers that simply show a calculation.
+
+5. In his article discussing Software Metrics, Kan discusses using Lines of Code (LOC) to assess product quality. Is this a good metric? Why or why not? Make sure your answer is not opinion. Support your answer with material from the article.
