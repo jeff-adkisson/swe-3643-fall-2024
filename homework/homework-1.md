@@ -4,27 +4,28 @@ This first exercise is to get you accustomed to writing simple unit tests in the
 
 **NOT GRADED! WHY SHOULD I BOTHER?**
 
-You must learn how to do the work. Therefore, the work is its own reward. Also, this work will prepare you for the project and that is 50% of your grade. If you do not do the homework, you will struggle to complete the project.
+You must learn how to do the work. Therefore, the work is its own reward. If that is not enough motivation, remember that this work will prepare you for the project and *that is 50% of your grade*. If you do not do the homework, you will struggle to complete the project.
 
-You must become proficient at these topics to be competitive in the industry. If you want to find work quickly after graduation, you must be technically proficient. Grades without the skills to back them up mean nothing in the real world.
+You must become proficient in these topics to be competitive in the industry. If you want to find work quickly after graduation, you must be technically proficient. Grades without the skills to back them up mean nothing in the real world. It is easy to graduate without performing a lot of hands-on work. I recommend avoiding that outcome.
 
 ## Parts
 
 The homework has two parts:
 
-- Configure and use Git and GitHub
-  *Source control is an essential software engineering skill. We will make use of `git`* and GitHub all semester.
-- Write a small unit test in the language of your choice, then commit it to `git` and push the commit to GitHub.
+- [Part 1: Configure and use Git and GitHub](#part-1-configure-and-use-git-and-github)
+  Source control is an *essential* software engineering skill. We will make use of `git` and GitHub all semester. Your semester project will submitted via GitHub.
+- [Part 2: Write Your First Unit Test](#part-2-write-your-first-unit-test)
+  Write a small unit test in the language of your choice, then commit it to `git` and push the commit to GitHub. Your final project will include unit tests validating the logic.
 
-## Optional
+## Optional Work You Should Try
 
-The final section is optional. It has some extra exercises I recommend if you have time. It covers how to clone your repo using the command line tools and how to run your unit tests from the command line. Developing proficiency using the command line is both instructive and helps differentiate you from less skilled developers who are entirely reliant on an IDE or graphical tool.
+[The final section is optional (but recommended).](#extra-work-you-should-try) It has some extra exercises worth your attention when you have time. It covers how to clone your repo using the command line tools and how to run your unit tests from the command line. Developing proficiency using the command line is both instructive and helps differentiate you from less skilled developers who are entirely reliant on an IDE or graphical tool.
 
 ## Written Homework 1 from Prior Semesters
 
-I have also provided the original written Homework 1 from prior semesters. We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.
+[I have also provided the original written Homework 1 from prior semesters.](#written-homework-1-from-prior-semesters) We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.
 
-## Part 1: Git and GitHub
+## Part 1: Configure and use Git and GitHub
 
 #### Watch a Few Short Videos
 
@@ -230,9 +231,9 @@ In this part, you will follow a unit testing tutorial related to your language o
 9. You pushed your `homework-1` work to GitHub.
 10. You confirmed your `homework-1` work is present in your GitHub repository.
 
-## Extra Work You Might Consider
+## Extra Work You Should Try
 
-This is optional, but recommended.
+This is optional, but highly recommended.
 
 #### Clone Your Repo Again using the `git` Command Line Tool
 
