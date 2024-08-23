@@ -43,6 +43,7 @@ Do not worry if some of these videos confuse yo. You will get a feel for this as
      - **Python** - **python*
    - Ignore choosing a license.
 
+<<<<<<< HEAD
    ![image-20240822085153045](homework-1-assets/image-20240822085153045.png)
 
 After creating the repository, it will contain two files - README.md and .gitignore. We will learn more about this later in the semester.
@@ -50,6 +51,15 @@ After creating the repository, it will contain two files - README.md and .gitign
 ![image-20240822085252638](homework-1-assets/image-20240822085252638.png)
 
 ![image-20240822090229164](homework-1-assets/image-20240822090229164.png)
+=======
+   ![image-20240822085153045](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822085153045.png)
+
+After creating the repository, it will contain two files - README.md and .gitignore. We will learn more about this later in the semester.
+
+![image-20240822085252638](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822085252638.png)
+
+![image-20240822090229164](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822090229164.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 #### Install Git on Your Machine
 
@@ -64,7 +74,11 @@ After creating the repository, it will contain two files - README.md and .gitign
       - Linux
         This will be specific to your Linux distribution. Google for help if you cannot find your Terminal.
    2. From your command line, type `git --version`. Assuming `git` is properly installed, you will see something like the following:
+<<<<<<< HEAD
       ![image-20240822072904716](homework-1-assets/image-20240822072904716.png)
+=======
+      ![image-20240822072904716](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822072904716.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 3. Finally, install a `git` graphical utility. I recommend Github Desktop or GitKraken.
    - Github Desktop
      From Github, free, cross-platform
@@ -77,15 +91,26 @@ After creating the repository, it will contain two files - README.md and .gitign
    
 4. Open GitHub Desktop and log in to Github. After you log in to Github, you will be able to locate the homework repository you created in the prior section.
 
+<<<<<<< HEAD
    ![image-20240822085601764](homework-1-assets/image-20240822085601764.png)
+=======
+   ![image-20240822085601764](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822085601764.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 5. Choose where to place the local copy of the repository on your machine, then clone the repository. Cloning makes a copy of the remote repository hosted by GitHub available on your machine for local work.
    *Note: the URL to the repository will be YOUR GitHub repository. The examples show the URL I made for this document. Do not use the values below.*
 
+<<<<<<< HEAD
    ![image-20240822085850047](homework-1-assets/image-20240822085850047.png)
 
 6. Once you have cloned your repository, it is on your machine and ready for you to add code. You can open the directory in Finder/Explorer:
    ![image-20240822090611242](homework-1-assets/image-20240822090611242.png)
+=======
+   ![image-20240822085850047](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822085850047.png)
+
+6. Once you have cloned your repository, it is on your machine and ready for you to add code. You can open the directory in Finder/Explorer:
+   ![image-20240822090611242](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822090611242.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 #### Push Your First Commit to your GitHub Repository
 
@@ -117,6 +142,7 @@ Next, you will update a single file, commit it to the local GitHub repository, a
 4. Save the file.
 5. If you are on an Apple Mac, edit the `.gitignore` file as well. Add `.DS_Store` to a new line at the end of the file. This will tell `git` to ignore this file used by the operating system that you do not ever need checked in. This is not absolutely necessary, but it helps keep your repository clean. Clean and tidy code is easier to read and maintain.
 6. Switch to Github Desktop or GitKraken. You will now see it has detected that README.md has changed.
+<<<<<<< HEAD
    ![image-20240822091259670](homework-1-assets/image-20240822091259670.png)
 
 7. Type a commit message briefly summarizing your changes, then click **Commit to main**. Writing good commit messages helps other people (and you) understand what changed. 
@@ -126,22 +152,44 @@ Next, you will update a single file, commit it to the local GitHub repository, a
 
 8. After pushing your changes, click the History tab. You can look at the commits to your repository. The commits show each change made. Note the Initial commit was made by GitHub when you made the remote repository.
    ![image-20240822104728585](homework-1-assets/image-20240822104728585.png)
+=======
+   ![image-20240822091259670](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822091259670.png)
+
+7. Type a commit message briefly summarizing your changes, then click **Commit to main**. Writing good commit messages helps other people (and you) understand what changed. 
+   ![image-20240822102839592](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822102839592.png)
+8. Next, send your changes to the repository hosted by GitHub. This is called pushing your changes to the origin (or remote). If you do not push your changes, they are not visible to other people using the repository hosted by GitHub. I like to push my changes routinely even when working alone to ensure I always have a copy of my work stored on both my machine and in the cloud.
+   ![image-20240822102959904](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822102959904.png)
+
+8. After pushing your changes, click the History tab. You can look at the commits to your repository. The commits show each change made. Note the Initial commit was made by GitHub when you made the remote repository.
+   ![image-20240822104728585](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822104728585.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 #### View Your Commit in GitHub
 
 1. Open your GitHub account in a browser and find your **swe3643-fall2024-homework**
 
    repository. The URL will be something like `https://github.com/YOUR_GITHUB_USERNAME_HERE/swe3643-fall2024-homework`.
+<<<<<<< HEAD
    ![image-20240822104949979](homework-1-assets/image-20240822104949979.png)
+=======
+   ![image-20240822104949979](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822104949979.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 ​	You will note that your change to the `README.md` file visible and nicely formatted.
 
 3. You can see the commits to your repository by clicking the **# Commits** link (under the blue Code button):
 
+<<<<<<< HEAD
    ![image-20240822105203737](homework-1-assets/image-20240822105203737.png)
 
 4. Click on the commit you made when you updated the `README.md` file. This will show you the changes you made to each file that was pushed to GitHub. The comment features are for collaborating on the code with other people who work on the repository with you.
    ![image-20240822105257157](homework-1-assets/image-20240822105257157.png)
+=======
+   ![image-20240822105203737](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822105203737.png)
+
+4. Click on the commit you made when you updated the `README.md` file. This will show you the changes you made to each file that was pushed to GitHub. The comment features are for collaborating on the code with other people who work on the repository with you.
+   ![image-20240822105257157](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822105257157.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 ## Part 2: Write Your First Unit Test
 
@@ -164,7 +212,11 @@ In this part, you will follow a unit testing tutorial related to your language o
 1. In the next step, you will follow a tutorial to do basic unit testing in a JetBrains IDE using your language of choice. Follow all instructions carefully. When you start the tutorial, be sure you are putting your work inside of the directory on your machine of your local `git` homework repository. If you do not do this, you will not be able to check in your work.
 
 2. Open Explorer/Finder and locate your `git` homework repository. Create a folder named `homework-1` in the same directory as the `README.md`, then place all work in/under `homework-1`. For example:
+<<<<<<< HEAD
    ![image-20240823095932324](homework-1-assets/image-20240823095932324.png)
+=======
+   ![image-20240823095932324](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823095932324.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 3. Follow one of the following tutorials based on your language of choice. When performing your tutorial, be sure your work is located in/under the `homework-1` directory you just created.
 
@@ -175,7 +227,11 @@ In this part, you will follow a unit testing tutorial related to your language o
 
       https://www.jetbrains.com/help/rider/Getting_Started_with_Unit_Testing.html#step-1-add-unit-test-project
       https://www.jetbrains.com/help/rider/Extending_Your_Solution.html#project_assembly_references
+<<<<<<< HEAD
       ![image-20240822113611824](homework-1-assets/image-20240822113611824.png)
+=======
+      ![image-20240822113611824](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240822113611824.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
    - **Java Tutorial**
 
@@ -187,6 +243,7 @@ In this part, you will follow a unit testing tutorial related to your language o
      https://www.jetbrains.com/help/pycharm/pytest.html
 
 4. After completing the tutorial, you need to check in your homework to your `git` repo, then push it to GitHub. Switch to GitHub desktop. You should see your work in your homework repository waiting to be checked in. If you do not, then you did not put your tutorial work in the right place (use Explorer/Finder to move it to the right spot).
+<<<<<<< HEAD
    ![image-20240823100456164](homework-1-assets/image-20240823100456164.png)
 
 5. Make sure everything is staged to commit. Type a short summary of the check in in the box below the list of staged files. Write something like `Completed homework 1 tutorial`. Click **Commit to main** after writing the message.
@@ -202,6 +259,23 @@ In this part, you will follow a unit testing tutorial related to your language o
 
 10. If everything is correct, you will see your latest commit and your `homework-1` directory in the remote GitHub repository:
     ![image-20240823101216735](homework-1-assets/image-20240823101216735.png)
+=======
+   ![image-20240823100456164](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823100456164.png)
+
+5. Make sure everything is staged to commit. Type a short summary of the check in in the box below the list of staged files. Write something like `Completed homework 1 tutorial`. Click **Commit to main** after writing the message.
+6. Switch to the History tab. You will be able to see the commit you just performed and the files related to the commit.
+   ![image-20240823100754708](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823100754708.png)
+7. Your changes are in your local repository. You need to push the GitHub next. GitHub Desktop notes this on the Changes tab when everything is checked in:
+   ![image-20240823100900866](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823100900866.png)
+8. Click **Push origin** to send your latest work to GitHub.
+   ![image-20240823100930123](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823100930123.png)
+
+9. Open your GitHub homework repository in a browser. Note that you can do this from GitHub Desktop by right-clicking the **Current Repository** and selecting **View on GitHub**.
+   ![image-20240823101114231](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823101114231.png)
+
+10. If everything is correct, you will see your latest commit and your `homework-1` directory in the remote GitHub repository:
+    ![image-20240823101216735](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823101216735.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 ## Summary
 
@@ -225,6 +299,7 @@ This is optional, but recommended.
 Sometimes we forget to commit everything. One simple way to verify everything you wanted to commit is present is to make a new clone of your GitHub repo, then see if everything still works. You can delete the new clone when finished. This is an excellent way to ensure the work you share on GitHub will compile and execute properly for the next person who clones your code (such as your instructor at the end of the semester). These steps will also demonstrate how to use the command line (Terminal) to clone your work. This is good practice so you learn how to use `git` without a GUI helper like GitHub Desktop. GUI tools are very helpful, but you also need to learn to confidently use the command line.
 
 1. Visit your `homework` GitHub repository and copy the **HTTPS** URL of the repository. Click the **Code** button to open the dialog showing the link:
+<<<<<<< HEAD
    ![image-20240823101830849](homework-1-assets/image-20240823101830849.png)
 2. Open a Termina/Command Prompt on your machine after copying the URL.
 3. Change to a directory *not* in your current homework repository. I suggest switching to the directory that contains your homework repository.
@@ -235,6 +310,18 @@ Sometimes we forget to commit everything. One simple way to verify everything yo
 5. Clone the second copy of your repository using the command below:
    `git clone [URL]`
    ![image-20240823103504048](homework-1-assets/image-20240823103504048.png)
+=======
+   ![image-20240823101830849](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823101830849.png)
+2. Open a Termina/Command Prompt on your machine after copying the URL.
+3. Change to a directory *not* in your current homework repository. I suggest switching to the directory that contains your homework repository.
+   ![image-20240823103145544](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823103145544.png)
+4. Create a new directory called `temp`, then switch to it.
+   ![image-20240823103205381](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823103205381.png)
+
+5. Clone the second copy of your repository using the command below:
+   `git clone [URL]`
+   ![image-20240823103504048](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823103504048.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
 
 6. Open your JetBrains IDE and open the new temporary clone. Verify you can run the unit tests you wrote. If not, you may be missing some code. Verify everything is committed properly from the homework section, then delete the `temp` clone and try again. 
 7. Assuming everything worked, you have now verified that someone else can clone your homework repository and run it. This is an essential skill you need to master before graduation to be competitve in the current market.
@@ -250,9 +337,15 @@ Running the tests your wrote in Homework 1 from the command line is easy in C# a
 1. Open a Terminal/Command prompt.
 2. Navigate to your `homework-1` directory.
 3. Navigate to the `Tests` directory. This directory will contain a `csproj` file and a class that holds your tests:
+<<<<<<< HEAD
    ![image-20240823104432784](homework-1-assets/image-20240823104432784.png)
 4. Type `dotnet test` to execute the tests in the Test project:
    ![image-20240823104718075](homework-1-assets/image-20240823104718075.png)
+=======
+   ![image-20240823104432784](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823104432784.png)
+4. Type `dotnet test` to execute the tests in the Test project:
+   ![image-20240823104718075](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-1-assets/image-20240823104718075.png)
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
    *Note: The warnings are telling you there are some methods that might improve your code. Get used to reading warnings and fixing them (or suppressing, if not relevant). Warnings are your friend.*
 
 **Java**
@@ -273,4 +366,8 @@ You might have noticed that C#, Java, and Python all operate a bit different. Ea
 
 I recommend learning at least C# or Java *plus* Python (which is very different from C#/Java).
 
+<<<<<<< HEAD
 C# and Java are heavily used in enterprise applications. Python is essential for machine learning and data science. All three provide outstanding employment opportunities. Having some confidence in at least one object-oriented language (C#/Java) and one dynamic language (Python) is a great way to build your skill set as you enter the job market.
+=======
+C# and Java are heavily used in enterprise applications. Python is essential for machine learning and data science. All three provide outstanding employment opportunities. Having some confidence in at least one object-oriented language (C#/Java) and one dynamic language (Python) is a great way to build your skill set as you enter the job market.
+>>>>>>> 17f196b927dc0aaaf624b9b88c1562d0f622667f
