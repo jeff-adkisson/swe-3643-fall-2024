@@ -41,18 +41,18 @@ The homework has two parts:
 
    https://www.youtube.com/watch?v=PvUexC0-D2s
 
-Do not worry if some of these videos confuse yo. You will get a feel for this as you actually try it. Never forget that you *cannot* learn these techniques by just watching a video or reading. You must *do* these techniques to become proficient.
+Do not worry if some of these videos confuse you. You will get a feel for this as you actually try it. Never forget that you *cannot* learn these techniques by just watching a video or reading. You must *do* these techniques to become proficient.
 
-#### Create Github Account and Homework Repository
+#### Create a Github Account and Homework Repository
 
-1. You need a Github account. If you do not have one, create a free account. One day you will likely share your GitHub portfolio with a client or portfolio, so avoid saying "ksu" or "student" or anything you might find embarrassing in your profile name.
+1. You need a GitHub account. If you do not have one, create a free account. One day you will likely share your GitHub portfolio with a client or portfolio, so avoid saying "ksu" or "student" or anything you might find embarrassing in your profile name.
    https://github.com/join
 
-2. Next, you need a repository for your course homework. Create a new repository in your Github account called **swe3643-fall2024-homework**. 
+2. Next, you need a repository for your course homework. Create a new repository in your GitHub account called **swe3643-fall2024-homework**. 
 
    - Make the repository public.
    - Check the box to make a `README` file.
-   - Use the Add Gitignore dropdown to select a `.gitignore` file for the language you choose to use. We will learn more about `.gitignore` later. Just choose one related to your preferred language you plan to use this semester. Your choices are:
+   - Use the Add Gitignore dropdown to select a `.gitignore` file for the language you choose to use. We will learn more about `.gitignore` later. Just choose one related to the language you plan to use this semester. Your choices are:
      - **Java** - **java**
      - **C#** - **visualstudio** (curious they call it this rather than csharp or dotnet)
      - **Python** - **python*
@@ -227,7 +227,7 @@ In this part, you will follow a unit testing tutorial related to your language o
 5. You viewed your work on GitHub.
 6. You used a JetBrains IDE to follow a simple tutorial to perform a unit test in your language of choice.
 7. You added the tutorial work to your local homework repository in the `homework-1` directory.
-8. You commited your `homework-1` files to your local repository.
+8. You committed your `homework-1` files to your local repository.
 9. You pushed your `homework-1` work to GitHub.
 10. You confirmed your `homework-1` work is present in your GitHub repository.
 
@@ -237,7 +237,7 @@ This is optional, but highly recommended.
 
 #### Clone Your Repo Again using the `git` Command Line Tool
 
-Sometimes we forget to commit everything. One simple way to verify everything you wanted to commit is present is to make a new clone of your GitHub repo, then see if everything still works. You can delete the new clone when finished. This is an excellent way to ensure the work you share on GitHub will compile and execute properly for the next person who clones your code (such as your instructor at the end of the semester). These steps will also demonstrate how to use the command line (Terminal) to clone your work. This is good practice so you learn how to use `git` without a GUI helper like GitHub Desktop. GUI tools are very helpful, but you also need to learn to confidently use the command line.
+Sometimes, we forget to commit to everything. When something is missing, it will likely not compile (routinely called "breaking the build"). One simple way to verify everything you wanted to commit is present in GitHub is to make a second clone of your GitHub repo, then use it to verify everything still works. You can delete the new clone when finished. This is an excellent way to ensure the work you share on GitHub will compile and execute properly for the next person who clones your code (such as your instructor at the end of the semester). The following steps also demonstrate how to use the command line (Terminal/Command Prompt) to clone your work. This is good practice so you learn how to use `git` without a GUI helper like GitHub Desktop or your IDE. GUI tools are very helpful, but you must also learn to confidently use the command line to be an expert software engineer.
 
 1. Visit your `homework` GitHub repository and copy the **HTTPS** URL of the repository. Click the **Code** button to open the dialog showing the link:
    ![image-20240823101830849](homework-1-assets/image-20240823101830849.png)
@@ -296,8 +296,8 @@ C# and Java are heavily used in enterprise applications. Python is essential for
 
 This assignment is aimed at assessing your understanding of the notion of quality and different measuring techniques that we can use to evaluate product quality in software testing. 
 
-1. A company uses the following metric to gauge product quality. Once a bug is reported, that same bug is closed if it cannot be recreated by the testing team. Naturally, this lead to a high defect fix rate. Based on what you’ve learned in Chapter 17, concisely identify at least two problems with this approach. As the testing manager, how would you modify this plan to more accurately reflect product quality?
-2. Dijkstra asserts that “Program testing can be used to show the presence of bugs, but never to show their absence!” Explain this statement. Provide one real world example that is not related to computing.
+1. A company uses the following metric to gauge product quality. Once a bug is reported, that same bug is closed if it cannot be recreated by the testing team. Naturally, this leads to a high defect fix rate. Based on what you’ve learned in Chapter 17, concisely identify at least two problems with this approach. As the testing manager, how would you modify this plan to more accurately reflect product quality?
+2. Dijkstra asserts that “Program testing can be used to show the presence of bugs, but never to show their absence!” Explain this statement. Provide one real-world example that is not related to computing.
 3. What is Software Quality? How do you know when the software provided is considered good software? And how do you know that an update is better than the previous version? 
 
 4. You are assigned the task of creating a program that adds two two-digit integers. Can you test the program exhaustively? If so, how many test cases are required? Assuming that each test case can be executed and analyzed in one second, how long would it take for you to run all of the tests? Fully explain your answer, along with all assumptions. No credit will be given for answers that simply show a calculation.
