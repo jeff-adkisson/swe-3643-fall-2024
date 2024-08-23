@@ -21,7 +21,7 @@ The homework has two parts:
 
 [The final section is optional (but recommended).](#extra-work-you-should-try) It has some extra exercises worth your attention when you have time. It covers how to clone your repo using the command line tools and how to run your unit tests from the command line. Developing proficiency using the command line is both instructive and helps differentiate you from less skilled developers who are entirely reliant on an IDE or graphical tool.
 
-## Written Homework 1 from Prior Semesters
+## Original Written Homework 1
 
 [I have also provided the original written Homework 1 from prior semesters.](#written-homework-1-from-prior-semesters) We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.
 
