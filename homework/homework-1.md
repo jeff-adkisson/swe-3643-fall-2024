@@ -166,10 +166,14 @@ This course uses JetBrains IDEs. I do not cover or support other IDEs. Your proj
 
 1. Sign up for a JetBrains student license. This is free and gives you full access to all JetBrains products while you are a student. It is an *outstanding* value. With this license, you do not have to use the less capable community editions.
    https://www.jetbrains.com/community/education/#students
+
 2. Installl the IDE you plan to use this semester. All JetBrains IDEs are cross-platform, so you can install them on Windows, Mac, or Linux.
    - Java: Intellij Ultimate Edition
    - C#: Rider
    - Python: Pycharm
+
+   *If you are not sure which language to use, choose C#. I am most proficient with that language and can help you the fastest. I have some capabilities with Java and Python, but do not use them much in my day-to-day work. Of the three languages you can choose for this course, Java is the least friendly for beginners due to its somewhat setup and build requirements.*
+
 3. Start the IDE and write a quick "Hello, World" application that writes "Hello, World" to the console. Once this is done, your IDE and environment should be operational.; You do not need to retain the "Hello, World" application.
 
 #### Create Your Homework Project in your Homework Repository
@@ -226,6 +230,7 @@ In this part, you will follow a unit testing tutorial related to your language o
 4. You committed your README.md file changes to your local repository, then pushed your changes to GitHub.
 5. You viewed your work on GitHub.
 6. You used a JetBrains IDE to follow a simple tutorial to perform a unit test in your language of choice.
+   *If you are not sure which language to use, choose C#. I am most proficient with that language and can help you the fastest. I have some capabilities with Java and Python, but do not use them much in my day-to-day work. Of the three languages you can choose for this course, Java is the least friendly for beginners due to its somewhat setup and build requirements.*
 7. You added the tutorial work to your local homework repository in the `homework-1` directory.
 8. You committed your `homework-1` files to your local repository.
 9. You pushed your `homework-1` work to GitHub.
@@ -272,29 +277,36 @@ Running the tests your wrote in Homework 1 from the command line is easy in C# a
 
 **Java**
 
-Running unit tests for a Maven project from the command line involves some configuration of your `pom.xml` file. Follow the steps in this tutorial to learn the method:
+Running unit tests for a Maven project from the command line involves additional configuration of in your Maven ``pom.xml` file. Follow the steps in this tutorial to learn the method:
+*If you choose the Gradle or Intellij build process instead of Maven, you need to do some research. I only cover Maven in this course.*
 
 https://mkyong.com/maven/how-to-run-unit-test-with-maven/
 
 **Python**
 
-Running tests for a Python project from the command line is quite simple. You typically only need to execute `pytest`  from the directory containing your tests. Follow the steps in this tutorial to learn the method:
+Running tests for a Python project from the command line is relatively simple. You typically only need to execute `pytest` from the directory containing your tests. Follow the steps in this tutorial to learn the method:
 
 https://carpentries-incubator.github.io/python-testing/05-pytest/index.html
 
-#### Got This Far? Do Another Language
+#### Got This Far? Try Another Language
 
-You might have noticed that C#, Java, and Python all operate a bit different. Each language is very capable and has a massive following in the industry. It is to your benefit to be proficient in more than one language at graduation.
+You might have noticed that C#, Java, and Python all operate a bit differently. In addition to having different syntax, each has a unique setup, build, and test environment. Each language is very capable and has a massive following in the industry. It is to your benefit to be proficient in more than one language at graduation. You want a diverse skill set to appeal to a broad range of employers and opportunities.
 
-I recommend learning at least C# or Java *plus* Python (which is very different from C#/Java).
+I recommend learning at least C# or Java *plus* Python (which is very different from C#/Java). 
 
-C# and Java are heavily used in enterprise applications. Python is essential for machine learning and data science. All three provide outstanding employment opportunities. Having some confidence in at least one object-oriented language (C#/Java) and one dynamic language (Python) is a great way to build your skill set as you enter the job market.
+> Note: Javascript/Typescript is also a very important language to add to your portfolio. That is outside the scope of this course, but I must mention it. Javascript is the most widely used language, and it continues to grow.
+
+C# and Java are heavily used in enterprise applications. Python is essential for machine learning and data science. All three provide outstanding employment opportunities all over the world. Having some confidence in at least one object-oriented language (C#/Java) and one dynamic language (Python) is a great way to build a diverse, valuable skill set as you enter the job market.
+
+If you execute Homework 1 in a second (or third) language, do not put the work in the same directory as your first round of work. Do not mix languages in the same folder arbitrarily. Here is how I structured my work:
+
+![image-20240824135210882](/Users/jeff/Library/Application Support/typora-user-images/image-20240824135210882.png)
 
 ## Written Homework 1 from Prior Semesters
 
-*This is the original homework 1 for this course. We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.*
+*This is the original homework 1 for this course provided by the SWE department. We will discuss this in class. This material is useful for preparing for the midterm. I encourage you to review it and give it a try.*
 
-This assignment is aimed at assessing your understanding of the notion of quality and different measuring techniques that we can use to evaluate product quality in software testing. 
+This assignment assesses your understanding of the notion of quality and different measuring techniques that we can use to evaluate product quality in software testing. 
 
 1. A company uses the following metric to gauge product quality. Once a bug is reported, that same bug is closed if it cannot be recreated by the testing team. Naturally, this leads to a high defect fix rate. Based on what you’ve learned in Chapter 17, concisely identify at least two problems with this approach. As the testing manager, how would you modify this plan to more accurately reflect product quality?
 2. Dijkstra asserts that “Program testing can be used to show the presence of bugs, but never to show their absence!” Explain this statement. Provide one real-world example that is not related to computing.
