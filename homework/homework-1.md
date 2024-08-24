@@ -49,28 +49,33 @@ Do not worry if some of these videos confuse you. You will get a feel for this a
    https://github.com/join
 
 2. Next, you need a repository for your course homework. Create a new repository in your GitHub account called **swe3643-fall2024-homework**. 
-
+   https://github.com/new
+   ![image-20240824141157205](/Users/jeff/Library/Application Support/typora-user-images/image-20240824141157205.png)
+   
    - Make the repository public.
    - Check the box to make a `README` file.
    - Use the Add Gitignore dropdown to select a `.gitignore` file for the language you choose to use. We will learn more about `.gitignore` later. Just choose one related to the language you plan to use this semester. Your choices are:
      - **Java** - **java**
-     - **C#** - **visualstudio** (curious they call it this rather than csharp or dotnet)
-     - **Python** - **python*
+     - **C#** - **visualstudio** *(curious they call it this rather than csharp or dotnet)*
+     - **Python** - **python**
    - Ignore choosing a license.
-
+   
    ![image-20240822085153045](homework-1-assets/image-20240822085153045.png)
 
-After creating the repository, it will contain two files - README.md and .gitignore. We will learn more about this later in the semester.
+After creating the repository, it will contain two files - `README.md` and `.gitignore`. We will learn more about `.gitignore` in another homework..
 
 ![image-20240822085252638](homework-1-assets/image-20240822085252638.png)
+
+The URL to your new repo can be found by clicking the **< > Code** button.
 
 ![image-20240822090229164](homework-1-assets/image-20240822090229164.png)
 
 #### Install Git on Your Machine
 
-1. You need the `git` source control tool installed on your machine. `git` is cross-platform, so it will work on Windows, Mac, and Linux. 
+1. You need the `git` source control tool installed on your machine. `git` is cross-platform, so it will work on Windows, Mac, and Linux. GitHub is a website that hosts `git` repositories. You will do most of your work using a local `git` repository on your machine, then push the repository changes to GitHub.
    https://git-scm.com/downloads
-2. `git` is a command line tool. We will also install a graphical tool to help using it, but first, test the tool.
+2. `git` is a command line tool. We will also install a graphical tool called GitHub Desktop to help using it, but first, test the tool.
+   
    1. Open a terminal window:
       - Windows (Command Prompt)
         https://www.wikihow.com/Open-the-Command-Prompt-in-Windows
@@ -110,7 +115,7 @@ Next, you will update a single file, commit it to the local GitHub repository, a
 
 2. Right-click on the **README.md** file and open it in Notepad (Windows) or TextEdit (Mac).
 
-   This file contains Markdown, a friendly language for writing well-formatted documentation. Markdown is an industry-standard method for writing documentation.
+   This file contains Markdown, a friendly language for writing well-formatted documentation. Markdown is an industry-standard method for writing documentation. It makes great looking documents and is easy to learn. Start leaning into Markdown and away from Word documents and PDF files.
    https://www.markdownguide.org/basic-syntax/
 
 3. In your text editor, change the file to the following:
