@@ -2,11 +2,21 @@
 
 This first exercise is to get you accustomed to writing simple unit tests in the language of your choice and committing your code to your GitHub repo. This exercise is not graded. This exercise will help you prepare your environment for the semester project. 
 
-**NOT GRADED! WHY SHOULD I BOTHER?**
+This looks long, but it is mostly a step-by-step recipe that you will carefully follow. There is not much original effort. Future assignments will require more thought.
+
+**HOMEWORK IS NOT GRADED! WHY SHOULD I BOTHER?**
 
 You must learn how to do the work. Therefore, the work is its own reward. If that is not enough motivation, remember that this work will prepare you for the project and *that is 50% of your grade*. If you do not do the homework, you will struggle to complete the project.
 
 You must become proficient in these topics to be competitive in the industry. If you want to find work quickly after graduation, you must be technically proficient. Grades without the skills to back them up mean nothing in the real world. It is easy to graduate without performing a lot of hands-on work. I recommend avoiding that outcome.
+
+**I HAVE NEVER DONE ANYTHING LIKE THIS.**
+
+That's OK. As a software engineer, you will routinely be asked to learn new things. You must develop the confidence you can solve complex technical problems. You have significant resources - Google, YouTube, more than a dozen years of school, and a very capable mind.  You also can ask me for help *after* you have tried to complete the assignment. I am here to help you, but you must try to solve the problems on your own first.
+
+**WHAT DOES SOURCE CONTROL HAVE TO DO WITH A TEST/QA COURSE?**
+
+I run my courses like an internship. At my company, you would have to use source control to pull code and submit new work. In this course, you will create and submit a complex project later in the semester. Your submission will be via GitHub - not D2L. Therefore, you must learn how to use `git` and GitHub. You will benefit from the experience and likely will learn to prefer it to zipping your work and attaching it to a D2L dropbox (which is tedious for everyone and makes grading a nightmare).
 
 ## Parts
 
@@ -47,7 +57,8 @@ Do not worry if some of these videos confuse you. You will get a feel for this a
 
 1. You need a GitHub account. If you do not have one, create a free account. One day you will likely share your GitHub portfolio with a client or portfolio, so avoid saying "ksu" or "student" or anything you might find embarrassing in your profile name.
    https://github.com/join
-
+   *Note: If you already have a GitHub account, you do not need to make one specifically for this course. You can use your existing account for your homework repository (next step).*
+   
 2. Next, you need a repository for your course homework. Create a new repository in your GitHub account called **swe3643-fall2024-homework**. 
    https://github.com/new
    ![image-20240824141157205](/Users/jeff/Library/Application Support/typora-user-images/image-20240824141157205.png)
