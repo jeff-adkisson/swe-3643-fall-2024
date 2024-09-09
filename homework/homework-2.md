@@ -113,7 +113,7 @@ If you want me to review your work after you check it in, you are welcome to ema
 
 2. Create a file named `pseudocode.txt` and copy the pseudocode into it.
 
-3. Put the following Markdown in Homework2/README.md. Include the screenshot you made of your coverage analysis. You can embed your diagram directly into your Markdown if it is Mermaid.js. Otherwise, take a photograph of your diagram with your phone (or a screenshot, if you made it with an application such as Dia) and reference the file.
+3. Put the following Markdown in your `Homework2/README.md` file. Include the screenshot you made of your coverage analysis. You can embed your diagram directly into your Markdown if it is Mermaid.js. Otherwise, take a photograph of your diagram with your phone (or a screenshot, if you made it with an application such as Dia) and reference the file.
 
    ```markdown
    # Homework 2
