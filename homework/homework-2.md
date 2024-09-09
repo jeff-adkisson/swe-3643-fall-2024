@@ -17,21 +17,21 @@ Homework 2 assumes you completed and understood the material in Homework 1.
 
 ## I Need Help
 
-Try Homework 2, then stop by my desk after any lecture for help. I almost always stay after to help students. You must attempt Homework 2 before requesting help. Remember that you have significant Internet resources to assist you. If you are having trouble with Homework 2, you can also expect me to review your Homework 1 effort, so do not skip that.
+Try Homework 2, then stop by my desk after any lecture for help. I almost always stay after to help students. You must attempt Homework 2 before requesting help. Remember that you have significant Internet resources to assist you. If you are having trouble with Homework 2, you can also expect me to review your completed [Homework 1](homework-1.md) effort, so do not skip that.
 
 If you want me to review your work after you check it in, you are welcome to email the URL to your GitHub homework repository.
 
 ## Homework 2 Steps
 
-1. Perform Branch Analysis
+1. **Perform Branch Analysis**
    Study a block of pseudocode and convert it to a graph showing every possible path
-2. Convert to Operational Code
+2. **Convert Pseudocode to Operational Code**
    Convert the pseudocode to the language of your choice
-3. Write Unit Tests
+3. **Write Unit Tests**
    Write unit tests to achieve 100% coverage of every branch
-4. Perform Coverage Analysis
+4. **Perform Coverage Analysis**
    Execute coverage analysis in your JetBrains IDE
-5. Check-in Homework 2 to your GitHub Homework Repository
+5. **Check-in Homework 2 to your GitHub Homework Repository**
    Practice submitting completed code with a README to your source control repository
 
 #### Perform Branch Analysis
@@ -42,7 +42,7 @@ If you want me to review your work after you check it in, you are welcome to ema
    - You do not need to graph the MAIN node. When you study the code, you will likely see why. You will have a single entry node to your tree.
 3. I recommend making your flowchart with [Mermaid.js](https://mermaid.js.org/syntax/flowchart.html) (though you might want to draw it by hand to start). This is good practice, and you can put it directly into a README markdown file for rendering in GitHub, Visual Studio Code, JetBrains IDEs, etc. PlantUML is another alternative for graphic via statements rather than manually clicking and drawing. See the [GradeLetterGenerator demo for an example.](https://github.com/jeff-adkisson/swe-3643-fall-2024/tree/c8ae6b5f14917dc77fd93fb6591e94f8067ce46c/examples/TestCoverage#graph-of-gradelettergenerator)
 
-#### Convert to Operational Code
+#### Convert Psuedocode to Operational Code
 
 1. Create a new console project in the language of your choice called Homework2. Put it next to your Homework1 folder in the Homework repository you created in Homework 1. 
    ![image-20240823095932324](homework-1-assets/image-20240823095932324.png)
@@ -111,7 +111,9 @@ If you want me to review your work after you check it in, you are welcome to ema
 
 1. Create a README.md file in the root directory of Homework2.
 
-2. Put the following Markdown in Homework2/README.md. Include the screenshot you made of your coverage analysis. You can embed your diagram directly into your Markdown if it is Mermaid.js. Otherwise, take a photograph of your diagram with your phone (or a screenshot, if you made it with an application such as Dia) and reference the file.
+2. Create a file named `pseudocode.txt` and copy the pseudocode into it.
+
+3. Put the following Markdown in Homework2/README.md. Include the screenshot you made of your coverage analysis. You can embed your diagram directly into your Markdown if it is Mermaid.js. Otherwise, take a photograph of your diagram with your phone (or a screenshot, if you made it with an application such as Dia) and reference the file.
 
    ```markdown
    # Homework 2
@@ -119,8 +121,9 @@ If you want me to review your work after you check it in, you are welcome to ema
    1. Performed Branch Analysis
       *Studied a block of pseudocode and converted it to a graph showing every possible path*
       { YOUR BRANCH DIAGRAM HERE }
-   2. Converted to Operational Code
+   2. Converted Pseudocode to Operational Code
       *Converted the pseudocode to operational, well-structured { LANGUAGE YOU USED }*
+      { LINK TO PSEUDOCODE FILE }
    3. Wrote Unit Tests
       *Wrote {# of Tests} { NUnit, JUnit, or PyTest } unit tests and achieved 100% coverage of every branch*
    4. Performed Coverage Analysis
@@ -128,9 +131,17 @@ If you want me to review your work after you check it in, you are welcome to ema
       { SCREENSHOT OF YOUR COVERAGE ANALYSIS HERE }
    ```
 
-3. Check-in your Homework2 folder to your local `git` homework repository.
-4. Push your changes to your remote GitHub repository.
-5. Visit the URL for your GitHub repository and navigate to the Homework2 folder. Does your README.md file look correct? Can you see your diagram and coverage image?
+4. Check-in your Homework2 folder to your local `git` homework repository.
+
+5. Push your changes to your remote GitHub repository.
+
+6. Visit the URL for your GitHub repository and navigate to the Homework2 folder. 
+
+   - Does your README.md file look correct? Fix any formatting problems.
+   - Can you see your diagram and coverage image? 
+   - Does the link to your pseudocode file work properly?
+
+   ***Always take a few moments to carefully review your checked-in work. You put a lot of effort into this. Make sure it is all there and looks great. Bad software engineers submit broken and incomplete code. It is very frustrating! Learn to do this properly, and your future teammates will enjoy working with you.***
 
 ## Standard Deviation Calculator Pseudocode
 
