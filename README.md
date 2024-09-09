@@ -20,6 +20,7 @@ This repository contains project information and code samples for KSU SWE 3643: 
 #### Homework (not graded, but *highly highly highly* recommended you perform it)
 
 - [Homework 1](homework/homework-1.md) 
+- [Homework 2](homework/homework-2.md) 
 
 [//]: # (#### Contents)
 
