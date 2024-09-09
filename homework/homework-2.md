@@ -2,10 +2,10 @@
 
 The goals of this second exercise include:
 
-- writing your own unit tests in the language of your choice.
-- converting an algorithm with moderately high cyclomatic complexity into a graph, then writing unit tests to test and cover each branch.
+- converting an algorithm with moderately high cyclomatic complexity into a graph to facilitate writing unit tests to test and cover each branch.
+- writing unit tests in a language of your choice using various assertion techniques including parameterized testing and testing for errors, null conditions, and equality.
 - exploring coverage techniques and considering the differences between method coverage, line coverage, and branch coverage. You will view coverage information in the JetBrains IDE of your language of choice.
-- continuing to learn Markdown and `git`.
+- continuing to learn Markdown and `git` by checking your Homework2 and a README.md file into GitHub.
 
 [Homework 1](homework-1.md) was mostly a step-by-step recipe with little original effort. This assignment will tax you a bit more, so please dedicate the time and effort to complete it. *Everything* you see here will appear in the semester project.
 
@@ -34,7 +34,7 @@ If you want me to review your work after you check it in, you are welcome to ema
 5. **Check-in Homework 2 to your GitHub Homework Repository**<br/>
    Practice submitting completed code with a README to your source control repository
 
-#### Perform Branch Analysis
+#### Section 1: Perform Branch Analysis
 
 1. Study the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) below.
 
@@ -48,14 +48,14 @@ If you want me to review your work after you check it in, you are welcome to ema
 
    [Take a look at this article on why diagramming via Mermaid or PlantUML is often (not always) better for documentation than using a visual diagramming tool.](https://dev.to/gallau/mermaid-a-better-way-to-version-diagrams-4ba0)
 
-#### Convert Psuedocode to Operational Code
+#### Section 2: Convert Psuedocode to Operational Code
 
 1. Create a new console project in the language of your choice called Homework2. Put it next to your Homework1 folder in the Homework repository you created in Homework 1. 
    ![image-20240823095932324](homework-1-assets/image-20240823095932324.png)
-2. Convert the Standard Deviation Calculator Pseudocode into operational code. When you run the application, it will output the following to the console:
+2. Convert the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) into operational code. When you run the application, it will output the following to the console:
    ![image-20240909104316713](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-2-assets/image-20240909104316713.png)
 
-#### Write Unit Tests
+#### Section 3: Write Unit Tests
 
 1. Configure your Homework 2 project to include unit tests using the same techniques for structuring your unit tests that you learned in Homework 1.
    - Unit tests are separate from your production code.
@@ -71,7 +71,7 @@ If you want me to review your work after you check it in, you are welcome to ema
      -  Python/Pytest:
         https://pytest-with-eric.com/introduction/pytest-assert-exception/
 
-#### Perform Coverage Analysis
+#### Section 4: Perform Coverage Analysis
 
 1. Run your unit tests from the prior section in your JetBrains IDE with test coverage.
 
@@ -111,15 +111,15 @@ If you want me to review your work after you check it in, you are welcome to ema
 
 6. Re-run your coverage statistics. Your coverage should once again be 100%.
 
-7. Take a screenshot of your 100% coverage results in your JetBrains IDE. You will include that in the README.md file for Homework 2.
+7. Take a screenshot of your 100% coverage results in your JetBrains IDE. You will include that in the README.md file for Homework 2 in the next section.
 
-#### Check-in Homework 2 to your GitHub Homework Repository
+#### Section 5: Check-in Homework 2 to your GitHub Homework Repository
 
-1. Create a README.md file in the root directory of Homework2.
+1. Create a file named `pseudocode.txt` in the Homework2 folder and copy the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) into it.
 
-2. Create a file named `pseudocode.txt` and copy the pseudocode into it.
+2. Create a README.md file in the root directory of Homework2.
 
-3. Put the following Markdown in your `Homework2/README.md` file. Include the screenshot you made of your coverage analysis. You can embed your diagram directly into your Markdown if it is Mermaid.js. Otherwise, take a photograph of your diagram with your phone (or a screenshot, if you made it with an application such as Dia) and reference the file.
+3. Put the following Markdown in your `Homework2/README.md` file. Include the screenshot of your coverage analysis from the prior section. You can embed your diagram directly into your Markdown if it is Mermaid.js. Otherwise, take a photograph of your diagram with your phone (or a screenshot, if you made it with an application such as Dia) and reference the file.
 
    ```markdown
    # Homework 2
