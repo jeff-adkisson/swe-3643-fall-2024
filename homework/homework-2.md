@@ -46,7 +46,7 @@ If you want me to review your work after you check it in, you are welcome to ema
 
    [PlantUML is another good alternative for diagrams via simple code rather than manually clicking and drawing.](https://plantuml.com/activity-diagram-beta) 
 
-   [Take a look at this article on why diagramming via Mermaid or PlantUML is often (not always) better for documentation than using a visual diagramming tool.]()
+   [Take a look at this article on why diagramming via Mermaid or PlantUML is often (not always) better for documentation than using a visual diagramming tool.](https://dev.to/gallau/mermaid-a-better-way-to-version-diagrams-4ba0)
 
 #### Convert Psuedocode to Operational Code
 
