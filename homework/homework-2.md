@@ -3,8 +3,8 @@
 The goals of this second exercise include:
 
 - writing your own unit tests in the language of your choice.
+- converting an algorithm with moderately high cyclomatic complexity into a graph, then writing unit tests to test and cover each branch.
 - exploring coverage techniques and considering the differences between method coverage, line coverage, and branch coverage. You will view coverage information in the JetBrains IDE of your language of choice.
-- deconstructing a moderately high cyclomatic complexity method into a graph, then writing unit tests to coverage each branch.
 - continuing to learn Markdown and `git`.
 
 [Homework 1](homework-1.md) was mostly a step-by-step recipe with little original effort. This assignment will tax you a bit more, so please dedicate the time and effort to complete it. *Everything* you see here will appear in the semester project.
