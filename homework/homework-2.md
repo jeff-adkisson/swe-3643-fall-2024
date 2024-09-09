@@ -25,13 +25,13 @@ If you want me to review your work after you check it in, you are welcome to ema
 
 1. **Perform Branch Analysis**<br/>
    Study a block of pseudocode and convert it to a graph showing every possible path
-2. **Convert Pseudocode to Operational Code****<br/>
+2. **Convert Pseudocode to Operational Code**<br/>
    Convert the pseudocode to the language of your choice
-3. **Write Unit Tests****<br/>
+3. **Write Unit Tests**<br/>
    Write unit tests to achieve 100% coverage of every branch
-4. **Perform Coverage Analysis****<br/>
+4. **Perform Coverage Analysis**<br/>
    Execute coverage analysis in your JetBrains IDE
-5. **Check-in Homework 2 to your GitHub Homework Repository****<br/>
+5. **Check-in Homework 2 to your GitHub Homework Repository**<br/>
    Practice submitting completed code with a README to your source control repository
 
 #### Perform Branch Analysis
