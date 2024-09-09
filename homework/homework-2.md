@@ -42,7 +42,7 @@ If you want me to review your work after you check it in, you are welcome to ema
    - Do not draw one node per line. You are graphing the branches through the application from start to finish.
    - You do not need to graph the MAIN node. When you study the code, you will likely see why. You will have a single entry node to your tree.
 
-3. I recommend making your flowchart with [Mermaid.js](https://mermaid.js.org/syntax/flowchart.html) (though you might want to draw it by hand to start). This is good practice, and you can put it directly into a README markdown file for rendering in GitHub, Visual Studio Code, JetBrains IDEs, etc. See the [GradeLetterGenerator demo for an example.](https://github.com/jeff-adkisson/swe-3643-fall-2024/tree/c8ae6b5f14917dc77fd93fb6591e94f8067ce46c/examples/TestCoverage#graph-of-gradelettergenerator)
+3. I recommend making your flowchart with [Mermaid.js](https://mermaid.js.org/syntax/flowchart.html) (though you might want to draw it by hand to start). This is good practice, and you can put it directly into a README markdown file for rendering in GitHub, Visual Studio Code, JetBrains IDEs, etc. See the [GradeLetterGenerator demo for an example.](https://github.com/jeff-adkisson/swe-3643-fall-2024/tree/main/examples/TestCoverage#graph-of-gradelettergenerator)
 
    [PlantUML is another good alternative for diagrams via simple code rather than manually clicking and drawing.](https://plantuml.com/activity-diagram-beta) 
 
