@@ -4,6 +4,8 @@ This first exercise is to get you accustomed to writing simple unit tests in the
 
 This looks long, but it is mostly a step-by-step recipe that you will carefully follow. There is not much original effort. Future assignments will require more thought.
 
+After you finish Homework 1, please proceed to [Homework 2](homework-2.md).
+
 **HOMEWORK IS NOT GRADED! WHY SHOULD I BOTHER?**
 
 You must learn how to do the work. Therefore, the work is its own reward. If that is not enough motivation, remember that this work will prepare you for the project and *that is 50% of your grade*. If you do not do the homework, you will struggle to complete the project.
@@ -251,6 +253,8 @@ In this part, you will follow a unit testing tutorial related to your language o
 8. You committed your `homework-1` files to your local repository.
 9. You pushed your `homework-1` work to GitHub.
 10. You confirmed your `homework-1` work is present in your GitHub repository.
+
+After you finish Homework 1, please proceed to [Homework 2](homework-2.md).
 
 ## Extra Work You Should Try
 
