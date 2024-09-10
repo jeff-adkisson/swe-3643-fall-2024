@@ -109,9 +109,23 @@ If you want me to review your work after you check it in, you are welcome to ema
    - Python/Pytest - pytest.mark.parametrize
      https://docs.pytest.org/en/7.1.x/how-to/parametrize.html
 
+   Following is a pseudocode example for a parameterized unit test:
+
+   ```
+   @TestParameter(2.5, "Above Average")
+   @... additional values testing every branch ...
+   Function STANDARD_DEVIATION__RECEIVE_STDDEV_VALUE__RETURN_LABEL(stdDev, expectedLabel):
+     
+       #act
+       actualLabel = INTERPRET_STANDARD_DEVIATION(stdDev)
+       
+       #assert
+       ASSERT_ARE_EQUAL(actualLabel, expectedLabel)
+   ```
+
 6. Re-run your coverage statistics. Your coverage should once again be 100%.
 
-7. Take a screenshot of your 100% coverage results in your JetBrains IDE. You will include that in the README.md file for Homework 2 in the next section.
+7. Take a screenshot of your 100% coverage results in your JetBrains IDE. In the next section, you will include the screenshot in the `README.md` file for Homework 2.
 
 #### Section 5: Check-in Homework 2 to your GitHub Homework Repository
 
