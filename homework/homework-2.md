@@ -39,7 +39,7 @@ If you want me to review your work after you check it in, you are welcome to ema
 1. Study the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) below.
 
 2. Draw a flowchart of *every* branch through the application. When complete, you should have a node for every condition in the application. 
-   - Do not draw one node per line. You are graphing the branches through the application from start to finish.
+   - Do not draw one node per line. You are graphing the branches through the application from start to finish. Branches are places where the flow of the code proceeds in a new direction. Your graph will reflect branches at conditions, function calls, and ternary expressions. Loops also exhibit branching behavior because the loop evaluates whether the continue looping at each iteration's start, end (or even in the middle).
    - You do not need to graph the MAIN node. When you study the code, you will likely see why. You will have a single entry node to your tree.
 
 3. I recommend making your flowchart with [Mermaid.js](https://mermaid.js.org/syntax/flowchart.html) (though you might want to draw it by hand to start). This is good practice, and you can put it directly into a README markdown file for rendering in GitHub, Visual Studio Code, JetBrains IDEs, etc. See the [GradeLetterGenerator demo for an example.](https://github.com/jeff-adkisson/swe-3643-fall-2024/tree/main/examples/TestCoverage#graph-of-gradelettergenerator)
@@ -53,18 +53,18 @@ If you want me to review your work after you check it in, you are welcome to ema
 1. Create a new console project in the language of your choice called Homework2. Put it next to your Homework1 folder in the Homework repository you created in Homework 1. 
    ![image-20240823095932324](homework-1-assets/image-20240823095932324.png)
 2. Convert the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) into operational code. When you run the application, it will output the following to the console:
-   ![image-20240909104316713](/Users/jeff/ksu/swe-3643-fall-2024/homework/homework-2-assets/image-20240909104316713.png)
+   ![image-20240909104316713](homework-2-assets/image-20240909104316713.png)
 
 #### Section 3: Write Unit Tests
 
-1. Configure your Homework 2 project to include unit tests using the same techniques for structuring your unit tests that you learned in Homework 1.
+1. Configure your Homework 2 project to include unit tests using the same techniques for structuring the unit tests that you performed in Homework 1.
    - Unit tests are separate from your production code.
    - Unit tests are named *SystemUnderTest_StateBeingTested_ExpectedResults*.
      For example, *StandardDeviation_ReceiveNullValueList_ThrowException*.
    - Unit tests follow the [AAA pattern: Arrange, Act, Assert](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80).
 2. Write unit tests using your application with the proper naming convention and AAA pattern for every branch you diagrammed in the previous section. Your goal is 100% branch coverage (not just line coverage or method coverage).
-   - In Homework 1, you use simple assertions to test for equality. In this exercise, you have to use additional assertion types, such as length, null (empty), and whether a method returned an exception. Remember that Google is your friend and that you have enormous resources on the Internet, particularly StackOverflow, YouTube, and the documentation for your unit test library to help you.
-     -  C#/Nunit:
+   - In Homework 1, you use simple assertions to test for equality. In this exercise, you will use additional assertion types, such as length, null (empty), and whether a method returned an exception. Remember that Google is your friend and that you have enormous resources on the Internet, particularly StackOverflow, YouTube, and the documentation for your unit test library to help you.
+     -  C#/Nunit (do not use XUnit or MSTest):
         https://docs.nunit.org/articles/nunit/writing-tests/assertions/classic-assertions/Assert.Throws.html
      -  Java/JUnit:
         https://www.baeldung.com/junit-assert-exception
@@ -158,14 +158,14 @@ If you want me to review your work after you check it in, you are welcome to ema
 # Start Application
 Function MAIN():
 
-    sampleValuesArray = [9, 6, 8, 5, 7]
-    sampleStdDev = COMPUTE_SAMPLE_STANDARD_DEVIATION(sampleValuesArray)
+    sampleValuesList = [9, 6, 8, 5, 7]
+    sampleStdDev = COMPUTE_SAMPLE_STANDARD_DEVIATION(sampleValuesList)
     Print("Sample StdDev =", sampleStdDev)
     # Writes "Sample StdDev=1.5811388300841898"
     # From https://www.cuemath.com/sample-standard-deviation-formula/
 
-    populationValuesArray = [9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4]
-    popStdDev = COMPUTE_POPULATION_STANDARD_DEVIATION(populationValuesArray)
+    populationValuesList = [9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4]
+    popStdDev = COMPUTE_POPULATION_STANDARD_DEVIATION(populationValuesList)
     Print("Population StdDev =", popStdDev)
     # Writes "Population StdDev=2.9832867780352594"
     # From https://www.thoughtco.com/population-standard-deviation-calculation-609522
@@ -173,28 +173,28 @@ Function MAIN():
 
 #######
 # Function to compute the mean (average) of a list of values
-Function COMPUTE_MEAN(valuesArray):
+Function COMPUTE_MEAN(valuesList:
 
-    If valuesArray is empty:
-        Raise Error "valuesArray parameter cannot be null or empty"
+    If valuesList is empty:
+        Raise Error "valuesList parameter cannot be null or empty"
     
     sumAccumulator = 0
-    For each value in valuesArray:
+    For each value in valuesList:
         sumAccumulator = sumAccumulator + value
     
     # Return the average (sum divided by the number of values we accumulated)
-    Return sumAccumulator / (Number of values in valuesArray)
+    Return sumAccumulator / (Number of values in valuesList)
       
 
 #######
 # Function to compute the sum of squared differences from the mean
-Function COMPUTE_SQUARE_OF_DIFFERENCES(valuesArray, mean):
+Function COMPUTE_SQUARE_OF_DIFFERENCES(valuesList, mean):
     
-    If valuesArray is empty:
-        Raise Error "valuesArray parameter cannot be null or empty"
+    If valuesList is empty:
+        Raise Error "valuesList parameter cannot be null or empty"
     
     squareAccumulator = 0
-    For each value in valuesArray:
+    For each value in valuesList:
         difference = value - mean
         squareOfDifference = difference * difference
         squareAccumulator = squareAccumulator + squareOfDifference
@@ -224,32 +224,32 @@ Function COMPUTE_VARIANCE(squareOfDifferences, numValues, isPopulation):
 
 #######
 # Function to compute the population or sample standard deviation from a list of values
-Function COMPUTE_STANDARD_DEVIATION(valuesArray, isPopulation):
+Function COMPUTE_STANDARD_DEVIATION(valuesList, isPopulation):
     
-    If valuesArray is empty:
-        Raise Error "valuesArray parameter cannot be null or empty"
+    If valuesList is empty:
+        Raise Error "valuesList parameter cannot be null or empty"
     
-    mean = COMPUTE_MEAN(valuesArray)
-    squareOfDifferences = COMPUTE_SQUARE_OF_DIFFERENCES(valuesArray, mean)
-    variance = COMPUTE_VARIANCE(squareOfDifferences, (Number of values in valuesArray), isPopulation)
+    mean = COMPUTE_MEAN(valuesList)
+    squareOfDifferences = COMPUTE_SQUARE_OF_DIFFERENCES(valuesList, mean)
+    variance = COMPUTE_VARIANCE(squareOfDifferences, (Number of values in valuesList), isPopulation)
     
     Return SquareRoot(variance)
     # where SquareRoot is a math function to compute the square root of the variance
 
 
 #######
-# Function to compute the sample standard deviation
-Function COMPUTE_SAMPLE_STANDARD_DEVIATION(valuesArray):
+# Function to compute the sample standard deviation from a list of values
+Function COMPUTE_SAMPLE_STANDARD_DEVIATION(valuesList):
 
 		# (false) in the following statement indicates we are computing a sample variance
-    Return COMPUTE_STANDARD_DEVIATION(valuesArray, false)
+    Return COMPUTE_STANDARD_DEVIATION(valuesList, false)
 
 
 #######
-# Function to compute the population standard deviation
-Function COMPUTE_POPULATION_STANDARD_DEVIATION(valuesArray):
+# Function to compute the population standard deviation from a list of values
+Function COMPUTE_POPULATION_STANDARD_DEVIATION(valuesList):
 
 		# (true) in the following statement indicates we are computing a population variance
-    Return COMPUTE_STANDARD_DEVIATION(valuesArray, true)
+    Return COMPUTE_STANDARD_DEVIATION(valuesList, true)
 ```
 
