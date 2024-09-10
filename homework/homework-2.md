@@ -52,7 +52,7 @@ If you want me to review your work after you check it in, you are welcome to ema
 
 1. Create a new console project in the language of your choice called Homework2. Put it next to your Homework1 folder in the Homework repository you created in Homework 1. 
    ![image-20240823095932324](homework-1-assets/image-20240823095932324.png)
-2. Convert the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) into operational code. When you run the application, it will output the following to the console:
+2. Convert the [Standard Deviation Calculator Pseudocode](#standard-deviation-calculator-pseudocode) into operational code. When you run the application, it will output the following to the console:<br/>
    ![image-20240909104316713](homework-2-assets/image-20240909104316713.png)
 
 #### Section 3: Write Unit Tests
