@@ -13,7 +13,7 @@ This repository contains project information and code samples for KSU SWE 3643: 
     `git clone https://github.com/jeff-adkisson/swe-3643-fall-2024.git`
 
 #### Course Documents
-- [Syllabus / docx](course/swe-3643-syllabus-adkisson-fall-2024.docx)
+- [Syllabus / docx](course/swe-3643-syllabus-adkisson-fall-2024.pdf)
 - [Introduction Presentation / pptx](course/introduction-lecture.pptx)
 - [Textbook / pdf](course/textbook.pdf)
 
