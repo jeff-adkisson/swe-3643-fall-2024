@@ -48,6 +48,46 @@ If you want me to review your work after you check it in, you are welcome to ema
 
    [Take a look at this article on why diagramming via Mermaid or PlantUML is often (not always) better for documentation than using a visual diagramming tool.](https://dev.to/gallau/mermaid-a-better-way-to-version-diagrams-4ba0)
 
+#### Branch Analysis Hint
+
+Here is a portion of the branch analysis graph to get you started.
+
+```mermaid
+---
+
+title: Standard Deviation Calculator
+---
+flowchart TD
+    computeSampleStdDev[ENTRY FUNC: Compute Sample Std Dev]
+    computeSampleStdDev --> |$valuesArr, $isPopulation=false|computeStdDev
+    
+    computePopStdDev[ENTRY FUNC: Compute Pop Std Dev]
+    computePopStdDev --> |$valuesArr, $isPopulation=true|computeStdDev
+
+    stdDevValid{Is Array Empty?}
+    computeStdDev --> stdDevValid
+    stdDevValid --> |Empty| stdDevError[[ERROR - $valuesArr cannot be empty]]
+    stdDevValid --> |$valuesArr| computeMean
+
+    computeStdDev[FUNC Compute Standard Deviation]
+
+    computeMean[FUNC Compute Mean of Values]
+    computeMeanValid{Is Array Empty?}
+    computeMean --> computeMeanValid
+    computeMeanValid --> |Empty| computeMeanError[[ERROR - $valuesArr cannot be empty]]
+    computeMeanValid --> |Not Empty| meanLoop[Accumulate Sum of Values]
+    meanLoop{LOOP All Values Processed?}
+    meanLoop --> |No, Values Remain|meanAccumulator[Accumulate Sum of Values]
+    meanAccumulator --> |Next Value|meanLoop
+    meanLoop --> computeMeanComplete[ASSIGN $mean = sum / array length]
+
+    computeMeanComplete --> |$valuesArr, $mean|computeSquareDiff
+    computeSquareDiff[FUNC Compute Square of Differences]
+  
+```
+
+
+
 #### Section 2: Convert Psuedocode to Operational Code
 
 1. Create a new console project in the language of your choice called Homework2. Put it next to your Homework1 folder in the Homework repository you created in Homework 1. 
