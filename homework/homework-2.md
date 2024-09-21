@@ -55,13 +55,15 @@ If you want me to review your work after you check it in, you are welcome to ema
 ```mermaid
 ---
 
-title: Standard Deviation Calculator
+title: Standard Deviation Functions
 ---
 flowchart TD
-    computeSampleStdDev[ENTRY FUNC: Compute Sample Std Dev]
+    startSample((Start)) --> |$valuesArr|computeSampleStdDev
+    computeSampleStdDev[FUNC Compute Sample Std Dev]
     computeSampleStdDev --> |$valuesArr, $isPopulation=false|computeStdDev
     
-    computePopStdDev[ENTRY FUNC: Compute Pop Std Dev]
+    startPop((Start)) --> |$valuesArr|computePopStdDev
+    computePopStdDev[FUNC Compute Pop Std Dev]
     computePopStdDev --> |$valuesArr, $isPopulation=true|computeStdDev
 
     stdDevValid{Is Array Empty?}
