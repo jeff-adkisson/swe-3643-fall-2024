@@ -58,18 +58,18 @@ If you want me to review your work after you check it in, you are welcome to ema
 title: Standard Deviation Functions
 ---
 flowchart TD
-    startSample((Start)) --> |$valuesArr|computeSampleStdDev
-    computeSampleStdDev[FUNC Compute Sample Std Dev]
-    computeSampleStdDev --> |$valuesArr, $isPopulation=false|computeStdDev
+    startSample(((START Sample Std Dev))) --> |Client PASSES $valuesArr|computeSampleStdDev
+    computeSampleStdDev[ENTRY FUNC: Compute Sample Std Dev]
+    computeSampleStdDev --> |PASS $valuesArr, $isPopulation=false|computeStdDev
     
-    startPop((Start)) --> |$valuesArr|computePopStdDev
-    computePopStdDev[FUNC Compute Pop Std Dev]
-    computePopStdDev --> |$valuesArr, $isPopulation=true|computeStdDev
+    startPop(((START Population Std Dev))) --> |Client PASSES $valuesArr|computePopStdDev
+    computePopStdDev[ENTRY FUNC: Compute Pop Std Dev]
+    computePopStdDev --> |PASS $valuesArr, $isPopulation=true|computeStdDev
 
     stdDevValid{Is Array Empty?}
     computeStdDev --> stdDevValid
     stdDevValid --> |Empty| stdDevError[[ERROR - $valuesArr cannot be empty]]
-    stdDevValid --> |$valuesArr| computeMean
+    stdDevValid --> |PASS $valuesArr| computeMean
 
     computeStdDev[FUNC Compute Standard Deviation]
 
@@ -81,11 +81,14 @@ flowchart TD
     meanLoop{LOOP All Values Processed?}
     meanLoop --> |No, Values Remain|meanAccumulator[Accumulate Sum of Values]
     meanAccumulator --> |Next Value|meanLoop
-    meanLoop --> computeMeanComplete[ASSIGN $mean = sum / array length]
+    meanLoop --> computeMeanAssign[ASSIGN $mean = sum / array length]
 
-    computeMeanComplete --> |$valuesArr, $mean|computeSquareDiff
-    computeSquareDiff[FUNC Compute Square of Differences]
-  
+    computeMeanReturn((RETURN $mean))
+    computeMeanAssign --> |End of FUNC Compute Mean of Values| computeMeanReturn
+ 
+    computeMeanReturn --> youFinish
+    youFinish[You finish from here...]
+
 ```
 
 
