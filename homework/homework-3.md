@@ -13,7 +13,7 @@ The goals of this third exercise include:
 - writing your own E2E Playwright test using the Playwright Test Generator.
 - continuing to learn Markdown and `git` by checking your Homework2 and a README.md file into GitHub.
 
-[Homework 1](homework-1.md) was mostly a step-by-step recipe with little original effort. [Homework 2](homework-2.md) was involved branch analysis, standard and parameterized unit testing, and achieving 100% code coverage. This final homework assignment will introduce you to end-to-end testing using Playwright, a popular framework for testing web-based applications. End-to-end testing (also called E2E) is a form of opaque box testing where you validate the operation of the surface controls of a system rather than the system's internal code and state. 
+[Homework 1](homework-1.md) was mostly a step-by-step recipe with little original effort. [Homework 2](homework-2.md) was involved branch analysis, standard and parameterized unit testing, and achieving 100% code coverage. Homework 3 will introduce you to end-to-end testing using Playwright, a popular framework for testing web-based applications. End-to-end testing (also called E2E) is a form of opaque box testing where you validate the operation of the surface controls of a system rather than the system's internal code and state. 
 
 Please dedicate the time and effort to complete this homework. *Everything* you see here will appear in the semester project.
 
