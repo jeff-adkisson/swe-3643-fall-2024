@@ -4,7 +4,11 @@
 
 The goals of this third exercise include:
 
-- configuring and using a popular opaque box web app testing tool called [Playwright](https://playwright.dev/).
+- configuring and using a popular opaque box web app testing tool called Playwright.
+  - [Playwright for C#](https://playwright.dev/dotnet/docs/intro)
+  - [Playwright for Java](https://playwright.dev/java/docs/intro)
+  - [Playwright for Python](https://playwright.dev/python/docs/intro)
+
 - complete the example tests for your chosen language provided by Playwright.
 - writing your own E2E Playwright test using the Playwright Test Generator.
 - continuing to learn Markdown and `git` by checking your Homework2 and a README.md file into GitHub.
@@ -36,11 +40,28 @@ If you want me to review your work after you check it in, you are welcome to ema
 
 ### Section 1: **Configure Playwright for your Chosen Language**
 
-S1
+1. [Before you install anything, watch this YouTube video giving an overview of Playwright. It will give you a good idea what Playwright does. The video is only 15 minutes.](https://www.youtube.com/watch?v=mB7YxSmnJz8)
+2. Go to the Getting Started page for your chosen language. You can also change the language in the top navigation bar.
+   - [Playwright for C#](https://playwright.dev/dotnet/docs/intro) for NUnit (*not* MSTest)
+   - [Playwright for Java](https://playwright.dev/java/docs/intro) for JUnit
+   - [Playwright for Python](https://playwright.dev/python/docs/intro) for Pytest
+3. Create a new directory in your homework repository called homework-3. Put it next to your homework-1 and homework-2 folder. 
+   ![image-20240823095932324](homework-3.assets/image-20240823095932324.png)
+
+4. *Carefully* follow every step in the Playwright Getting Started | Installation page for your chosen language. Place the projects, files, etc. the Installation page lists in your homework-2 directory. 
+   *Almost 100% of problems with Playwright start right here. You must carefully follow every line of the Installation process to make Playwright operate properly.*
+
+   Typical problems per language/OS include:
+
+   - C# - You *must* have PowerShell installed (even on a Mac [yuck - I dislike PowerShell]). Use NUnit, *not* MSTest.
+   - Java - You must use [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) as your build system. If you use Gradle, you are on your own. [Get to know Maven here.](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
+   - Python - You must have Python 3.8 installed and a recent verson of `pip`. 
+
+5. 
 
 ### Section 2: Complete the Example Playwright E2E Tests
 
-S2
+1. 
 
 ### Section 3: Use the Playwright Test Generator to Write an E2E Test
 
@@ -48,11 +69,11 @@ S2
 
 ### Section 4: Execute Tests from the Command Line/Terminal
 
-S4
+1. 
 
 ### Section 5: Check-in Homework 3 to your GitHub Homework Repository
 
-1. Create a README.md file in the root directory of Homework3.
+1. Create a README.md file in the root directory of Homework 3.
 
 2. Put the following Markdown in your `Homework3/README.md` file. 
 
