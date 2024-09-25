@@ -94,7 +94,8 @@ To fully understand Playwright testing, you need to know the basics of how a bro
    Typical problems per language/OS include I have seen include:
 
    - **C#** - You *must* have PowerShell installed. Use NUnit, *not* MSTest.
-   - **C# on Mac** - You *must* have PowerShell. I did not even know they had this for Mac before starting work with Playwright (I thought it was only a Windows language).
+   - **C# on Mac** - You *must* have PowerShell just like the Windows users. I did not even know they had this for Mac before starting work with Playwright (I thought it was only a Windows language).
+     https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos
    - **Java** - You must use [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) as your build system. If you use Gradle, you are on your own. [Get to know Maven here.](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
    - **Python** - You must have Python 3.8 installed and a recent verson of `pip`. 
 
@@ -116,7 +117,48 @@ Playwright's documentation includes two examples for each language that run E2E 
 
 Playwright has a friendly test generator that will help you write sophisticated tests simply by clicking and navigating in your web UI while the Playwright test generator watches your actions. The test generator is cross-platform, so you can use it on Windows, Mac, and Linux systems.
 
-![generator](https://github.com/microsoft/playwright/assets/13063165/53bdfb6f-d462-4ce0-ab95-0619faaebf1e)
+You will use the test generator to write tests against a sample to do app on the Playwright site.
+
+Visit https://demo.playwright.dev/todomvc to try the sample app.
+
+1. Open a terminal and navigate to the directory containing your homework 3 project.
+
+2. Launch the code generator window using the command line instructions for your selected language:
+
+   - **C#**<br>
+     https://playwright.dev/dotnet/docs/codegen-intro#running-codegen
+
+   -  **Java**<br>
+     https://playwright.dev/java/docs/codegen-intro#running-codegen
+
+   - **Python**<br>
+
+     https://playwright.dev/python/docs/codegen-intro#running-codegen
+
+   ![image-20240925163524722](homework-3.assets/image-20240925163524722.png)
+
+3. Change the **Target** to match your language. This changes the language and library the generator will produce.
+   ![image-20240925163723500](homework-3.assets/image-20240925163723500.png)
+4. Type **Complete homework 3** in the browser to list box and press **Enter**. You will see your activity recorded in the generator window:
+   ![image-20240925164052508](homework-3.assets/image-20240925164052508.png)
+
+5. Mark the new item as complete:
+   ![image-20240925164216953](homework-3.assets/image-20240925164216953.png)
+
+6. Click **Clear completed** in the to do app window.
+   ![image-20240925164310528](homework-3.assets/image-20240925164310528.png)
+
+7. Stop recording by clicking **Record**.
+8. Click **Copy** to copy the generated test to the clipboard.
+   ![image-20240925165520592](homework-3.assets/image-20240925165520592.png)
+9. Paste the test into your Homework 3 project next to the example test from the prior section.
+   ![image-20240925165617769](homework-3.assets/image-20240925165617769.png)
+
+10. Run all tests.
+    ![image-20240925165731173](homework-3.assets/image-20240925165731173.png)
+
+The Playwright test generator is very useful for building up your tests. It cannot always generate everything you need, but it can do most of what you need, then you can add the additional commands. For example, try making the assertion that **0 items left** is on the to do list screen:
+![image-20240925165959804](homework-3.assets/image-20240925165959804.png)
 
 ### Section 5: Execute Tests from the Command Line/Terminal
 
@@ -134,6 +176,8 @@ You have enormous competition for jobs. You must take advantage of everything yo
 - **C#** - https://playwright.dev/dotnet/docs/running-tests#run-all-tests
 - **Java** - https://playwright.dev/java/docs/intro#running-the-example-script
 - **Python** - https://playwright.dev/python/docs/running-tests#command-line
+
+![image-20240925170117160](homework-3.assets/image-20240925170117160.png)
 
 ### Section 6: Check-in Homework 3 to your GitHub Homework Repository
 
