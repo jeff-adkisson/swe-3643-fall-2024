@@ -1,6 +1,8 @@
 # Homework 3
 
-Your semester project includes a web server application that performs statistical calculations. In addition to writing unit tests to cover 100% of the statistical library, you will write end-to-end tests that validate the operation of your web user interface using a popular web app testing tool called Playwright. To prepare for your project, you need to get to know Playwright.
+Your semester project includes writing a web server application that performs statistical calculations. In addition to writing unit tests to cover 100% of the statistical library that powers your application, you will write end-to-end tests that validate the operation of your web user interface using a popular web app testing tool called [Playwright](https://playwright.dev). To prepare for your project, you need to get to know Playwright.
+
+Playwright is cross-platform and works with multiple languages. Whether you are writing Java on Linux or Python on Windows, Playwright will work in your project.
 
 The goals of this third exercise include:
 
@@ -33,9 +35,9 @@ Try Homework 1 and 2, then stop by my desk after any lecture for help. I almost 
 
 If you want me to review your work after you check it in, you are welcome to email the URL to your GitHub homework repository.
 
-## What does Playwright do?
+## What Does Playwright Do?
 
-Playwright is a specialized tool for user interface testing. Your user interface is typically the outermost surface of your application exposed to end users. Playwright tests connect to your web-UI and validate that it operates in the manner you specify in your Playwright tests.
+Playwright is a specialized tool for web-based user interface testing. An application's user interface is typically the outermost surface exposed to end users. Playwright tests connect to your web-UI and validate that it operates in the manner you specify in your Playwright tests.
 
 Since you are testing the UI and the UI uses the lower layers of your application (controllers, models, business logic, services, data layers), it implicitly tests many (but not necessarily all) of the lower layers of your application.
 
@@ -61,7 +63,7 @@ To fully understand Playwright testing, you need to know the basics of how a bro
 
 ## Homework 3 Steps
 
-1. **Get to Know Playwright**
+1. **Get to Know Playwright**<br/>
    Watch a video and browse the documentation.
 2. **Configure Playwright for your Chosen Language**<br/>Install Playwright for your operating system and chosen language
 3. **Complete the Example Playwright E2E Tests**<br/>Complete an example unit test from the documentation to validate that Playwright is operational
@@ -112,9 +114,9 @@ Playwright's documentation includes two examples for each language that run E2E 
 
 ### Section 4: Use the Playwright Test Generator to Write an E2E Test
 
-Playwright has a friendly test generator that will help you write sophisticated tests simply by clicking and navigating in your web-UI while the test generator watches the actions you took.
+Playwright has a friendly test generator that will help you write sophisticated tests simply by clicking and navigating in your web UI while the Playwright test generator watches your actions. The test generator is cross-platform, so you can use it on Windows, Mac, and Linux systems.
 
-
+![generator](https://github.com/microsoft/playwright/assets/13063165/53bdfb6f-d462-4ce0-ab95-0619faaebf1e)
 
 ### Section 5: Execute Tests from the Command Line/Terminal
 
@@ -137,7 +139,7 @@ You have enormous competition for jobs. You must take advantage of everything yo
 
 1. Create a README.md file in the root directory of Homework 3.
 
-2. Put the following Markdown in your `Homework3/README.md` file. 
+2. Put the following Markdown in your `Homework3/README.md` file. You are welcome (and encouraged) to add more information, such as how to configure Playwright, how to execute tests from the command line, etc.
 
    ```markdown
    # Homework 3
@@ -153,14 +155,22 @@ You have enormous competition for jobs. You must take advantage of everything yo
       { SCREENSHOT OF TERMINAL SHOWING COMMANDS TO START TESTING, PLUS RESULTS}
    ```
 
-3. Check-in your Homework3 folder to your local `git` homework repository.
+3. Check in your Homework3 folder to your local `git` homework repository.
 
 4. Push your changes to your remote GitHub repository.
 
-5. Visit the URL for your GitHub repository and navigate to the Homework2 folder. 
+5. Visit the URL for your GitHub repository and navigate to the Homework3 folder. 
 
    - Does your README.md file look correct? Fix any formatting problems and check-in the corrections.
    - Can you see your images? 
 
-   ***Always take a few moments to carefully review your checked-in work. You put a lot of effort into this. Make sure it is all there and looks great. Bad software engineers submit broken and incomplete code. It is very frustrating! Learn to do this properly, and your future teammates will enjoy working with you.***
+6. Clone your homework repository to a *new* location on your computer. Next, open a terminal and try to run homework 3 from the *new* location. If it works, then you successfully checked in all of the code and configuration information necessary to clone and run your application. If it does not work, why? If something is missing, go back to your original repository, fix what is missing, and try again. This is a simple way to ensure that the next person to clone your project will be able to clone it and run it quickly.
+
+   > [!TIP]
+   >
+   > **Always take a few moments to carefully review your checked-in work.** You put a lot of effort into this. Make sure it is all there and looks great. Bad software engineers submit broken and incomplete code. It is very frustrating! Learn to do this properly, and your future teammates will enjoy working with you.
+
+   > [!TIP]
+   >
+   > **Get very good at this process.** Software engineers are paid to *write* good code and *deliver* good code. This last part is how you deliver your great code to your client, employer, personal project, open source project, etc. Good code that is improperly shared is *not* code code. Most industry jobs *do not* tell you to zip code and drop it into a folder like your typical University project.
 
