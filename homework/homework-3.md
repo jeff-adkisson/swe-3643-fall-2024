@@ -210,11 +210,15 @@ You have enormous competition for jobs. You must take advantage of everything yo
 
 6. Clone your homework repository to a *new* location on your computer. Next, open a terminal and try to run homework 3 from the *new* location. If it works, then you successfully checked in all of the code and configuration information necessary to clone and run your application. If it does not work, why? If something is missing, go back to your original repository, fix what is missing, and try again. This is a simple way to ensure that the next person to clone your project will be able to clone it and run it quickly.
 
-   > [!TIP]
-   >
-   > **Always take a few moments to carefully review your checked-in work.** You put a lot of effort into this. Make sure it is all there and looks great. Bad software engineers submit broken and incomplete code. It is very frustrating! Learn to do this properly, and your future teammates will enjoy working with you.
+&nbsp;
 
-   > [!TIP]
-   >
-   > **Get very good at this process.** Software engineers are paid to *write* good code and *deliver* good code. This last part is how you deliver your great code to your client, employer, personal project, open source project, etc. Good code that is improperly shared is *not* code code. Most industry jobs *do not* tell you to zip code and drop it into a folder like your typical University project.
+> [!TIP]
+>
+> **Always take a few moments to carefully review your checked-in work.** You put a lot of effort into this. Make sure it is all there and looks great. Bad software engineers submit broken and incomplete code. It is very frustrating! Learn to do this properly, and your future teammates will enjoy working with you.
+
+&nbsp;
+
+> [!TIP]
+>
+> **Get very good at this process.** Software engineers are paid to *write* good code and *deliver* good code. This last part is how you deliver your great code to your client, employer, personal project, open source project, etc. Good code that is improperly shared is *not* code code. Most industry jobs *do not* tell you to zip code and drop it into a folder like your typical University project.
 
