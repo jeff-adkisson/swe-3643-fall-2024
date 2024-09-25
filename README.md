@@ -21,6 +21,7 @@ This repository contains project information and code samples for KSU SWE 3643: 
 
 - [Homework 1](homework/homework-1.md) 
 - [Homework 2](homework/homework-2.md) 
+- [Homework 3](homework/homework-3.md) 
 
 [//]: # (#### Contents)
 
