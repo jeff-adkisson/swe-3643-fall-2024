@@ -4,14 +4,9 @@
 
 # Grading Rubric
 
-#### Team Selection: 2%
+#### Team Selection: 5%
 
--  2%: Team selection performed on time by submitting team information to the project spreadsheet.
-
-#### Project Checkpoints: 3%
-
--  1.5%: Was checkpoint 1 submitted on time to the D2L dropbox?
--  1.5%: Was checkpoint 2 submitted on time to the D2L dropbox?
+-  5%: Team selection performed on time by submitting team information to the project spreadsheet including your teatm's public GitHub URL.
 
 #### Source Control: 5%
 
@@ -19,6 +14,10 @@
    -  README.md in root
    -  .gitignore in root
    -  `/src` folder with all source code for four project modules
+
+> [!WARNING] 
+>
+> Your project must be in your GitHub repository to be graded. Submissions via D2L, email, etc. will not be accepted.
 
 #### Coding Standards: 5%
 
@@ -28,7 +27,7 @@
 
 -  5%: All documentation described in the specification is present, internally linked via a Table of Contents, contains the required material, and is grammatically correct. Important images, such as the architecture diagram, are visible - not just linked.
 
-   Markdown is correctly formatted with headings, code blocks, relative links (where appropriate), etc.
+   Markdown is correctly formatted with headings, code blocks, relative links (where appropriate), images/screenshots, diagrams, etc.
 
 #### Architecture: 10%
 
@@ -36,34 +35,37 @@
 
 #### Calculator Logic: 15%
 
--  15%: All calculator methods are implemented and detect success and failure conditions as appropriate.
+-  15%: All calculator methods are implemented and detect success and failure conditions as appropriate, returning a Results object to the client. Calculator logic is not split between the logic module and the UI module.
 
 #### Calculator Unit Tests: 25%
 
--  2.5%: The unit test module references the calculator logic. Calculator logic is *not* tightly coupled with unit test logic. Test logic and calculator logic are strictly separated between the unit test and calculator logic modules.
--  15%: All calculator methods have one or more related unit tests. All paths are tested, including success and failure paths. All unit tests follow the naming convention from the specification and implement the AAA pattern.
+-  2.5%: The unit test module references the calculator logic. Test logic and calculator logic are strictly separated between the unit test and calculator logic modules.
+-  15%: All calculator methods have one or more related unit tests. All branches are tested, including success and failure paths. All unit tests follow the UnitOfWork_StateUnderTest_ExpectedBehavior naming convention from the specification and implement the AAA pattern.
 -  7.5%: All calculator logic achieves 100% test coverage (as demonstrated in your IDE during your video demonstration). Coverage must test all logic, so carefully review code for 100% path coverage (including ternary conditions, if present).
 
 #### Web Server App: 15%
 
--  2.5%: The web server app references the calculator logic. Calculator logic is *not* tightly coupled with UI logic. UI logic and calculator logic are strictly separated between the web app and the calculator logic module.
--  5%: The web server app can perform single and double operand operations such as add (2 operands) and sin (single operand).
--  2.5%: The web server app can show error conditions such as division by zero, returning "Not a Number."
+-  5%: The web server app references the calculator logic. UI logic and calculator logic are strictly separated between the web app and the calculator logic module.
+-  5%: The web server app can show error conditions returned from the logic module such as an empty list or a non-numeric value in a list or an improperly formed input line.
 -  2.5%: The web server app implements a clear function to reset the app to the default state.
--  2.5%: The web server app user interface matches the specifications, including layout, colors, and navigation.
+-  2.5%: The web server app's user interface, including layout, colors, and navigation, matches the specifications.
 
 #### End-to-End Testing: 10%
 
--  2.5%: The end-to-end-test module does not directly reference the web server module (or the calculator logic and unit test modules). The end-to-end test module only references the web server module via the running server's URL.
+-  2.5%: The end-to-end-test module does not directly reference the web server module (or the calculator logic and unit test modules). The end-to-end test module only references the web server module *via* the running server's URL.
 -  7.5%: All end-to-end tests listed in the specification are written and operational. All end-to-end tests follow the method naming convention from the specification. 
 
 #### Extra Credit: Static Analysis: 5%
 
--  5%: Perform static analysis via SonarQube Community Edition. Include your analysis per the specification in your documentation and video presentation.
+-  5%: Perform static analysis via SonarQube Community Edition. Include your analysis in your documentation and video presentation, per the specification.
 
-*You must complete every other section of the project to be eligible for extra credit in this section. Do not skip one section with the intention of making up for the loss with this section.*
+> [!NOTE]
+>
+> You must complete all Static Analysis requirements to receive extra credit. This section is all or nothing.
 
-*You must complete all  Static Analysis requirements to receive extra credit. This section is all or nothing.*
+> [!NOTE]
+>
+> You must complete every other section of the project to be eligible for extra credit in this section. Do not skip one section with the intention of making up for the loss with this section.
 
 #### Final Presentation: 5%
 
@@ -71,17 +73,23 @@
 
 -  The video meets all specifications, including executing your application, unit tests, and end-to-end tests from a command line/terminal (you only demonstrate coverage from your IDE). The video is available on YouTube or Vimeo or is checked into your GitHub repository.
 
-*The video presentation has a minimal score value, but it is an important part of grading. If some or all of your project does not work, the video is your best method to demonstrate some mastery of the material and receive partial credit.*
-
-*Failure to submit the video will result in a penalty of 25%.*
+> [!WARNING]
+>
+> The video presentation has a minimal score value, but it is an important part of grading. If some or all of your project does not work, the video is your best method of demonstrating some mastery of the material and receiving partial credit. **Failure to submit the video will result in a penalty of 25%.**
 
 #### Minimal Path to Success
 
-You can achieve a 75% score on the project by completing all sections except the web server app and end-to-end testing.
+You can achieve up to a 75% score on the project by completing all sections except the web server app and end-to-end testing.
 
 If you choose to drop sections, be sure the sections you perform are polished and demonstrate close adherence to the specifications.
 
-Do not drop the video presentation. Failure to submit a video presentation will result in a 25% penalty.
+> [!WARNING]
+>
+> **Do not drop the video presentation. Failure to submit a video presentation will result in a 25% penalty.**
 
-Projects with dropped sections are not eligible for extra credit.
+> [!NOTE]
+>
+> Projects with dropped sections are not eligible for extra credit.
+
+
 
