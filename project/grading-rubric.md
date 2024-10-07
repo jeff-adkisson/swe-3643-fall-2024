@@ -17,7 +17,7 @@
 
 > [!WARNING] 
 >
-> Your project must be in your GitHub repository to be graded. Submissions via D2L, email, etc. will not be accepted.
+> Your project **must** be in your GitHub repository to be graded. Submissions via D2L, email, etc. will not be accepted.
 
 #### Coding Standards: 5%
 
@@ -55,18 +55,6 @@
 -  2.5%: The end-to-end-test module does not directly reference the web server module (or the calculator logic and unit test modules). The end-to-end test module only references the web server module *via* the running server's URL.
 -  7.5%: All end-to-end tests listed in the specification are written and operational. All end-to-end tests follow the method naming convention from the specification. 
 
-#### Extra Credit: Static Analysis: 5%
-
--  5%: Perform static analysis via SonarQube Community Edition. Include your analysis in your documentation and video presentation, per the specification.
-
-> [!NOTE]
->
-> You must complete all Static Analysis requirements to receive extra credit. This section is all or nothing.
-
-> [!NOTE]
->
-> You must complete every other section of the project to be eligible for extra credit in this section. Do not skip one section with the intention of making up for the loss with this section.
-
 #### Final Presentation: 5%
 
 5% if complete, -25% penalty if not included
@@ -81,15 +69,21 @@
 
 You can achieve up to a 75% score on the project by completing all sections except the web server app and end-to-end testing.
 
-If you choose to drop sections, be sure the sections you perform are polished and demonstrate close adherence to the specifications.
+- Team Selection 5%
+- Source Control 5%
+- Coding Standards 5%
+- Documentation 5%
+- Architecture 10%
+- Calculator Logic 15%
+- Calculator Logic Unit Tests 25%
+- Final Presentation 5%
+- Minimal Path Effort = 75%
+
+If you choose to drop sections, be certain the sections you do submit are polished and demonstrate close adherence to the specifications. To achieve 75% on only the sections listed above, you must achieve a perfect score on each of those sections.
 
 > [!WARNING]
 >
 > **Do not drop the video presentation. Failure to submit a video presentation will result in a 25% penalty.**
-
-> [!NOTE]
->
-> Projects with dropped sections are not eligible for extra credit.
 
 
 
