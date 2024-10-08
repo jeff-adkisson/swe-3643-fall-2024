@@ -85,5 +85,7 @@ If you choose to drop sections, be certain the sections you do submit are polish
 >
 > **Do not drop the video presentation. Failure to submit a video presentation will result in a 25% penalty.**
 
+## Overall Grade Policy
 
+**Your final course grade can only be one letter grade higher than your project.** If you do poorly on the project, you will do poorly overall.
 

@@ -256,23 +256,29 @@ If the Writing Center does not do it for you, do not give up on becoming a bette
    literature.
    ```
 
-## Submission Schedule
+## Project Schedule
 
-The project is due on Friday, April 26th, at 11:59 PM. The instructor will automatically clone all GitHub repositories for grading at that time.
+-  **Project Work Days**<br>
+   No lecture, Jeff in classroom to assist teams. Attendance is optional.*
+   
+   -  Nov 4, Nov 6, Nov 11, Nov 13, Nov 18, Nov 20, Dec 2
+   
+-  **Project Submission - Monday Dec 2 by 11:59 PM**<br>
 
-Other essential project dates include:
-
--  Project Work Days<br/>*No lecture, Jeff in classroom to assist teams. Attendance is optional.*
-   -  Monday 4/15
-   -  Wednesday 4/17
-   -  Monday 4/22
-   -  Wednesday 4/24
-
--  **Project Submission - Friday 4/26 at 11:59 PM**
-
+   I will clone all projects on Tuesday Dec 3 at midnight. 
+   
    Late submissions receive the penalties outlined in the Syllabus.
 
-You do not have to be on my recommended schedule, but you should do your best to be close. Waiting until the last minute to do this project will likely result in an inferior grade (and remember - your semester grade cannot be higher than one letter grade higher than your project score). If you are starting from zero by the Project Work Days, there will be little I can do to help you. I am available to help you with problems - not help you build your application at the last minute.
+### Suggested Schedule
+
+Here are suggestions to help you structure your time.
+
+1. Plan to complete your logic library and achieve 100% unit test coverage of the logic library by Nov 4. 
+2. Have your web application operational (if not 100% complete) by Nov 18.
+3. Have your end-to-end tests complete before the holiday break.
+4. Over the break or on the last day of class, polish your code, documentation, and presentation. Finally, verify your submission before the due date.
+
+The Thanksgiving break (week of Nov 25) can break your momentum. You also will be going into finals for other courses when you return. I suggest finishing most or all of your project before the break. Your project is due on the last day of class before midnight. That is also the first day back from the break.
 
 ## Submission Components
 
@@ -291,9 +297,9 @@ Your finished project will include:
 
 I will grade your project between the submission date and the day final grades are due. This will be a significant effort, so please submit on time if you can avoid it (plus your grade will also suffer).
 
-This project is **50%** of your semester grade, so you must have enough time to complete it.
+This project is **50%** of your semester grade.
 
-Your final grade can only be one letter grade higher than your project. If you do poorly on the project, you will do poorly overall.
+**Your final course grade can only be one letter grade higher than your project.** If you do poorly on the project, you will do poorly overall.
 
 If your project meets the requirements in this document, not only will you receive a top score, but you will have earned valuable expertise and enhanced your GitHub repository with a great-looking project.
 
@@ -307,7 +313,15 @@ If you choose to work alone, you commit to that decision for the project's durat
 
 When you are stuck, you are welcome to ask for advice from classmates or visit the KSU computer lab to get you moving again, *but* *your work must be your own.*
 
-Please do not outsource your project to a homework-help site like Chegg. I have had that happen before. I am good at spotting unusual work and will read your code. If I suspect your work is not your own, I will ask you to join me on a video call and explain your work line by line. If I remain unconvinced the work is yours, I will ask my KSU colleagues to do additional reviews.
+## AI Coding Assistance and Other Shortcuts
+
+If you use an AI to do your project:
+
+- I probably will not know.
+- You will not learn much or anything. Using an AI (or copying a prior student's project or paying a homework assistance site, like Chegg, to do your project) is like going to the gym and watching other people work out—it is a waste of your time and money.
+- You might get a good grade, but you probably will not be successful in the industry. [The same AI technologies that can help you complete this project is the same AI technology that is shrinking the market for entry level engineers.](https://www.cio.com/article/3509174/ai-coding-assistants-wave-goodbye-to-junior-developers.html) You must be able to do the work yourself to secure a position and keep it.
+
+AI technolgy is powerful and has significant value. However, it can and will stunt your ability to learn problem solving and great coding skills. Please do your own work and reap the benefits of owning your new skills. It does not hurt me if you take a shortcut here... it only hurts you.
 
 ## When You Need Help
 
@@ -324,16 +338,6 @@ When you ask me for coding assistance:
 -  **Always include your team’s public GitHub repository URL.**
 -  Check the offending code in your GitHub repository so I can look at it and run it. If your code is not in your GitHub repository, I will not attempt to compile or run it. [Also consider creating a separate source branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) before sharing problematic code with me to avoid breaking operational code in your main code trunk.
 -  To compile and run your code, your **README.md** must have the environment configuration instructions and execution steps. Keep those accurate and up-to-date.
-
-## AI Coding Assistance and Other Shortcuts
-
-If you use an AI to do your project:
-
-- I probably will not know.
-- You will not learn much or anything. Using an AI (or copying a prior student's project or paying a homework assistance site, like Chegg, to do your project) is like going to the gym and watching other people work out—it is a waste of your time and money.
-- You might get a good grade, but you probably will not be successful in the industry. [The same AI technologies that can help you complete this project is the same AI technology that is shrinking the market for entry level engineers.](https://www.cio.com/article/3509174/ai-coding-assistants-wave-goodbye-to-junior-developers.html) You must be able to do the work yourself to secure a position and keep it.
-
-AI technolgy is powerful and has significant value. However, it can and will stunt your ability to learn problem solving and great coding skills. Please do your own work and reap the benefits of owning your new skills. It does not hurt me if you take a shortcut here... it only hurts you.
 
 ## Errors and/or Inconsistencies in these Documents
 
