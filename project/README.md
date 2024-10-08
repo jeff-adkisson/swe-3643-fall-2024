@@ -169,7 +169,7 @@ Every semester, I see nervous students achieve great things when given a bit of 
 
 ### I Know React/Angular/Vue/otherSPAFrameworkHere. Can I Use That?
 
-**No.** You must use a server framework that renders HTML on the server. SPA development is prohibited due to its higher complexity and risk of overall project failure. This project is complex enough—do not make it more complex.
+**No.** You must use a server framework that renders HTML on the server. SPA development is prohibited due to its higher complexity and risk of overall project failure. This project is complex enough—do not make it more complex. Your framework, language choices, and test runner must be in the list.
 
 ## Source Control via Git and GitHub
 
@@ -327,9 +327,8 @@ AI technolgy is powerful and has significant value. However, it can and will stu
 
 **I will try to assist you, but I will not write your code.**
 
--  Come to some or all of the project workdays at the end of the semester for help. See the Syllabus for the dates. Last-minute frantic emails just before the project is due are unlikely to get a helpful response.
--  When you are stuck, you are welcome to ask for advice from classmates or visit the KSU computer lab to get you moving again, *but your work must be your own.*
--  I am not a miracle worker. You must do your best to solve your problem (or at least understand it) before asking for help.
+-  Come to some or all of the project workdays at the end of the semester for help. Last-minute frantic emails just before the project is due are unlikely to get a helpful response.
+-  You must do your best to solve your problem (or at least understand it) before asking for help.
 -  I am most proficient with C#, so consider picking that language if you anticipate needing much help.
 
 When you ask me for coding assistance:

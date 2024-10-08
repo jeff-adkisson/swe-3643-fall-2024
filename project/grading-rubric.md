@@ -4,9 +4,17 @@
 
 # Grading Rubric
 
+## Course Grade Policy
+
+**Your final course grade can only be one letter grade higher than your project.** If you do poorly on the project, you will do poorly overall.
+
+## Project Components
+
 #### Team Selection: 5%
 
--  5%: Team selection performed on time by submitting team information to the project spreadsheet including your teatm's public GitHub URL.
+-  5%: Team selection was performed on time by submitting team information to the project spreadsheet, including your team's public GitHub URL.
+   *Due Mon Oct 14 by 11:59 PM*<br>
+   *The remainder of your project is due on Dec 2 by 11:59 PM via your team's public GitHub project repository.*
 
 #### Source Control: 5%
 
@@ -17,7 +25,7 @@
 
 > [!WARNING] 
 >
-> Your project **must** be in your GitHub repository to be graded. Submissions via D2L, email, etc. will not be accepted.
+> Your project **must** be in your GitHub repository to be graded. Submissions via D2L, email, etc., will not be accepted.
 
 #### Coding Standards: 5%
 
@@ -46,7 +54,7 @@
 #### Web Server App: 15%
 
 -  5%: The web server app references the calculator logic. UI logic and calculator logic are strictly separated between the web app and the calculator logic module.
--  5%: The web server app can show error conditions returned from the logic module such as an empty list or a non-numeric value in a list or an improperly formed input line.
+-  5%: The web server app can show error conditions returned from the logic module, such as an empty list, a non-numeric value in a list, or an improperly formed input line.
 -  2.5%: The web server app implements a clear function to reset the app to the default state.
 -  2.5%: The web server app's user interface, including layout, colors, and navigation, matches the specifications.
 
@@ -63,7 +71,7 @@
 
 > [!WARNING]
 >
-> The video presentation has a minimal score value, but it is an important part of grading. If some or all of your project does not work, the video is your best method of demonstrating some mastery of the material and receiving partial credit. **Failure to submit the video will result in a penalty of 25%.**
+> The video presentation has a minimal score value but is essential to grading. If some or all of your project does not work, the video is your best method of demonstrating some mastery of the material and receiving partial credit. **Failure to submit the video will result in a penalty of 25%.**
 
 #### Minimal Path to Success
 
@@ -79,13 +87,9 @@ You can achieve up to a 75% score on the project by completing all sections exce
 - Final Presentation 5%
 - Minimal Path Effort = 75%
 
-If you choose to drop sections, be certain the sections you do submit are polished and demonstrate close adherence to the specifications. To achieve 75% on only the sections listed above, you must achieve a perfect score on each of those sections.
+If you choose to drop sections, be sure the sections you submit are polished and demonstrate close adherence to the specifications. To achieve 75% on only the sections listed above, you must achieve a perfect score on each of those sections.
 
 > [!WARNING]
 >
 > **Do not drop the video presentation. Failure to submit a video presentation will result in a 25% penalty.**
-
-## Overall Grade Policy
-
-**Your final course grade can only be one letter grade higher than your project.** If you do poorly on the project, you will do poorly overall.
 
