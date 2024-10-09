@@ -4,7 +4,7 @@
 
 -  [Project Overview](#project-overview)
 -  [Grading Rubric](grading-rubric.md)
--  Requirements (Wed Oct 9)
+-  [Requirements](requirements.md)
 
 # Project Overview
 
@@ -337,6 +337,17 @@ When you ask me for coding assistance:
 -  **Always include your team’s public GitHub repository URL.**
 -  Check the offending code in your GitHub repository so I can look at it and run it. If your code is not in your GitHub repository, I will not attempt to compile or run it. [Also consider creating a separate source branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) before sharing problematic code with me to avoid breaking operational code in your main code trunk.
 -  To compile and run your code, your **README.md** must have the environment configuration instructions and execution steps. Keep those accurate and up-to-date.
+
+### Helpful Resources from Homework
+
+Homework 1, 2, and 3 were made to prepare you for the project. Review those.
+
+- [Homework 1](https://github.com/jeff-adkisson/swe-3643-fall-2024/blob/main/homework/homework-1.md)
+  [Example Solution C#](https://github.com/jeff-adkisson/swe-3643-fall-2024-homework/tree/main/homework-1/csharp/Homework1)
+- [Homework 2](https://github.com/jeff-adkisson/swe-3643-fall-2024/blob/main/homework/homework-2.md)
+  [Example Solution C#](https://github.com/jeff-adkisson/swe-3643-fall-2024-homework/tree/main/homework-2/csharp/Homework2)
+- [Homework 3](https://github.com/jeff-adkisson/swe-3643-fall-2024/blob/main/homework/homework-3.md)
+  [Example Solution](https://github.com/jeff-adkisson/swe-3643-fall-2024-homework/tree/main/homework-3/csharp/PlaywrightTests)
 
 ## Errors and/or Inconsistencies in these Documents
 

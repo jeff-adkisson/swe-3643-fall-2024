@@ -19,7 +19,6 @@
 -  [Visual Design Requirements](#visual-design-requirements) 
 -  [Unit Test Plan and Coverage Requirements](#unit-test-plan-and-coverage-requirements)
 -  [End-To-End Test Plan and Requirements](#end-to-end-test-plan-and-requirements)
--  [*OPTIONAL EXTRA CREDIT:* Static Analysis via SonarQube](#static-analysis-via-sonarqube)
 -  [Final Presentation Requirements](#final-presentation-requirements)
 -  [Suggested Implementation Order](#suggested-implementation-order)
 
@@ -847,17 +846,20 @@ For example:
 
 Following are the minimum end-to-end tests you must include:
 
-| Requirement #   | Test                                                         |
-| --------------- | ------------------------------------------------------------ |
-| preq-E2E-TEST-5 | Verify the page title is "Calculator".                       |
-| preq-E2E-TEST-6 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Verify the sum displayed in the calculator UI matches Input A plus Input B. |
-| preq-E2E-TEST-7 | From the application's default state, put a value into Input A and a zero (0) into Input B, then call the Divide operation. Verify the result is an error state in the calculator UI including a result box containing **"Not a Number"**. |
-| preq-E2E-TEST-8 | From the application's default state, put a numeric values into Input A and a text value (such as `fifteen`) into Input B, then call the Add operation. Verify the result is an error state in the calculator UI including a result box containing **"Invalid Input, Numbers Only"**. Note that your CalculatorEngine methods only accept floating point values, so this error condition will be caught in your web server logic (either in a controller or a model, depending on implementation) - not in your CalculatorEngine. |
-| preq-E2E-TEST-9 | From the application's default state, put two numeric values into Inputs A and B, then call the Add operation. Next, click the Clear button. Verify the application has returned to the default state including a result box containing **"Enter a value(s) below and select an operation."** and a 0 in the Input A and Input B boxes. |
+| Requirement #    | Test                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| preq-E2E-TEST-5  | Verify the page title is "Calculator".                       |
+| preq-E2E-TEST-6  | From the application's default state, compute the sample standard deviation for 9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4. Verify that the result is 3.060787652326. |
+| preq-E2E-TEST-7  | From the application's default state, attempt to compute the population standard deviation with an empty list. Verify the error message is shown. |
+| preq-E2E-TEST-8  | From the application's default state, attempt to compute the sample standard standard deviation with a single value. Verify the error message is shown. |
+| preq-E2E-TEST-9  | From the application's default state, compute the mean for 9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4. Verify that the result is 7. |
+| preq-E2E-TEST-10 | From the application's default state, compute the z-score for 5.5 with a mean of 7 and a standard deviation of 3.060787652326. Verify that the result is -0.49007. |
+| preq-E2E-TEST-11 | From the application's default state, compute the single linear regression formula for the following 12 X,Y pairs. Verify the result is y = -0.04596X + 6.9336.<br />5,3<br/>3,2<br/>2,15<br/>1,12.3<br/>7.5,-3<br/>4,5<br/>3,17<br/>4,3<br/>6.42,4<br/>34,5<br/>12,17<br/>3,-1 |
+| preq-E2E-TEST-12 | From the application's default state, predict the Y value for the regression values X=6, M=-0.04596, B=6.9336. Verify the result is 6.65784. |
 
 #### End to End Test Naming Conventions and Structure
 
-**preq-E2E-TEST-8**
+**preq-E2E-TEST-13**
 
 You will name all end-to-end tests following this pattern:
 
@@ -874,7 +876,7 @@ Here are some more examples:
 -  `CalculatorWebUi_DivideFloatingPointValueAndZero_ReturnsNotANumberError`
 -  `CalculatorWebUi_TextInInputBox_ReturnsInvalidInputError`
 
-**preq-E2E-TEST-10**
+**preq-E2E-TEST-14**
 
 Your end-to-end tests do not have to strictly follow the AAA pattern like your unit tests because end-to-end testing is often a linear set of steps, and every step or two is doing an assertion. Try to organize your end-to-end tests to be as readable.
 
@@ -968,97 +970,103 @@ Check your video into your GitHub repository (you will likely have to compress i
 
 I suggest implementing your semester project in this order to achieve the highest score.
 
-1.  Create your CalculatorEngine module and the Divide method.
+1. Create your Calculator Logic module and the Mean method.
 
-2.  Create your unit test module and implement the unit tests for Divide. This will help you structure how to return both valid conditions and error conditions. For example, instead of just returning a floating point result, you might return an object with multiple properties, such as:
+2. Create your unit test module and implement the unit tests for Mean. This will help you structure how to return both valid conditions and error conditions. Instead of just returning a floating point result, you should return an object with multiple properties, such as:
 
-    ```c#
-    //C#
-    
-    public class CalculationResult {
-      public double Result { get; set;} = 0.0;
-      public bool IsSuccess { get; set; }
-      public string Operation { get; set; } // for example, "1.25 + 3.8 ="
-      public string Error { get; set; } // for example, "" or "Not A Number"
-    }
-    ```
+   ```c#
+   //C#
+   
+   public class CalculationResult {
+     public double Result { get; set;} = 0.0;
+     public bool IsSuccess { get; set; }
+     public string Operation { get; set; } // for example, "1.25 + 3.8 ="
+     public string Error { get; set; } // for example, "" or "Not A Number"
+   }
+   ```
 
-    ```java
-    //Java
-    
-    public class CalculationResult {
-        private double result = 0.0;
-        private boolean isSuccess;
-        private String operation; 
-        private String error; 
-    
-        public double getResult() {
-            return result;
-        }
-    
-        public void setResult(double result) {
-            this.result = result;
-        }
-    
-        public boolean getIsSuccess() {
-            return isSuccess;
-        }
-    
-        public void setIsSuccess(boolean isSuccess) {
-            this.isSuccess = isSuccess;
-        }
-    
-        public String getOperation() {
-            return operation;
-        }
-    
-        // for example, "1.25 + 3.8 ="
-        public void setOperation(String operation) {
-            this.operation = operation;
-        }
-    
-        public String getError() {
-            return error;
-        }
-       
-        // for example, "" or "Not A Number"
-        public void setError(String error) {
-            this.error = error;
-        }
-    }
-    ```
+   ```java
+   //Java
+   
+   public class CalculationResult {
+       private double result = 0.0;
+       private boolean isSuccess;
+       private String operation; 
+       private String error; 
+   
+       public double getResult() {
+           return result;
+       }
+   
+       public void setResult(double result) {
+           this.result = result;
+       }
+   
+       public boolean getIsSuccess() {
+           return isSuccess;
+       }
+   
+       public void setIsSuccess(boolean isSuccess) {
+           this.isSuccess = isSuccess;
+       }
+   
+       public String getOperation() {
+           return operation;
+       }
+   
+       // for example, "1.25 + 3.8 ="
+       public void setOperation(String operation) {
+           this.operation = operation;
+       }
+   
+       public String getError() {
+           return error;
+       }
+      
+       // for example, "" or "Not A Number"
+       public void setError(String error) {
+           this.error = error;
+       }
+   }
+   ```
 
-    ```python
-    # Python
-    
-    class CalculationResult:
-        def __init__(self):
-            self.result = 0.0
-            self.is_success = False
-            self.operation = "" # for example, "1.25 + 3.8 ="
-            self.error = "" # for example, "" or "Not A Number"
-    ```
+   ```python
+   # Python
+   
+   class CalculationResult:
+       def __init__(self):
+           self.result = 0.0
+           self.is_success = False
+           self.operation = "" # for example, "1.25 + 3.8 ="
+           self.error = "" # for example, "" or "Not A Number"
+   ```
 
-    *If this approach interests you (and hopefully it does), do some reading on [Primitive Obsession](https://hackernoon.com/what-is-primitive-obsession-and-how-can-we-fix-it-wh2f33ki). It will change the way you design how to return data from a method.*
+3. Next, complete all Logic methods and unit tests.<br>*Consider trying the [Test Driven Development (TDD) testing methodology](https://testdriven.io/test-driven-development/) here. TDD advocates writing your test method before the code it actually tests. This leads to very testable code, tests that express requirements, and tests that document how to call the methods in your project.*
 
-3.  Next, complete all CalculatorEngine methods and unit tests.<br>*Consider trying the [Test Driven Development (TDD) testing methodology](https://testdriven.io/test-driven-development/) here. TDD advocates writing your test method before the code it actually tests. This leads to very testable code, tests that express requirements, and tests that document how to call the methods in your project.*
+4. Create your web server app and reference the Logic module.
 
-4.  Create your web server app and reference the CalculatorEngine module.
+5. Create a basic controller, model, and view that renders a multiline input box (text area), a button, and an output area. Hook the input box and button to the Logic module's Mean method and get the input/output showing in the web browser.
 
-5.  Create a basic controller, model, and view that renders two input boxes, a button, and an output area. Hook these input boxes and button to one of the CalculatorEngine's two-operand methods and get the input/output showing in the web browser.
+6. Now that you are able to call the Logic module from your web app, implement the entire web interface.
 
-6.  Now that you are able to call the CalculatorEngine from your web app, implement the entire web interface.
+7. Once your web application is fully operational, write your end-to-end Playwright tests.
 
-7.  Once your web application is fully operational, write your end-to-end Playwright tests.
+8. Update all of your README.md documentation to match your environment, command-line execution statements, etc.
 
-8.  Update all of your README.md documentation to match your environment, command-line execution statements, etc.
+9. Search this document for every `preq-` requirement. Validate that you met every requirement. If you missed a requirement, implement it.
 
-9.  Search this document for every `preq-` requirement. Validate that you met every requirement. If you missed a requirement, implement it.
+10. Record your final video presentation. Check the link into your README.md file.
 
-10.  Record your final video presentation. Check the link into your README.md file.
+11. Clone your GitHub team repository to an entirely new directory on your computer (or better, a fresh computer such as a friend's machine). Follow the steps to configure the environment and execute the web app and tests. Does everything work? Is anything missing? If not, then you are done. If something was missing, then figure out what was not checked into your repository or you did not document properly in your README.md, then try it again. Repeat until your project is easy to clone and execute with minimal effort.
 
-11.  Clone your GitHub team repository to an entirely new directory on your computer (or better, a fresh computer such as a friend's machine). Follow the steps to configure the environment and execute the web app and tests. Does everything work? Is anything missing? If not, then you are done. If something was missing, then figure out what was not checked into your repository or you did not document properly in your README.md, then try it again. Repeat until your project is easy to clone and execute with minimal effort.
+12. Open a browser and visit your GitHub repository. Navigate to your README.md file and verify it is appropriately formatted. Look for Markdown that is improperly formatted. Click every link in the README.md file. Do they all work? Did you break an anchor link? Did GitHub interpret your Markdown a little differently than Typora or VS Code suggested it would look? These are common issues that must be corrected to ensure your work is highly polished. If you find an issue, correct the file on your machine, then check in the fix and validate again. You can see this activity in my own GitHub check-in history:![image-20240205105410682](requirements.assets/image-20240205105410682.png)
 
-12.  Open a browser and visit your GitHub repository. Navigate to your README.md file and verify it is appropriately formatted. Look for Markdown that is improperly formatted. Click every link in the README.md file. Do they all work? Did you break an anchor link? Did GitHub interpret your Markdown a little differently than Typora or VS Code suggested it would look? These are common issues that must be corrected to ensure your work is highly polished. If you find an issue, correct the file on your machine, then check in the fix and validate again. You can see this activity in my own GitHub check-in history:![image-20240205105410682](requirements.assets/image-20240205105410682.png)
-     
-13.  Each team member should review your GitHub submission if you are in a Team of Two. Make sure you both agree that the project is ready. In a prior semester, a team of four was upset that their team grade was lower than expected because the team member who handled the submission could have done a better job. Never let a teammate's lack of motivation or capability impact your success, even if that means you must do more work than you consider fair.
+13. Each team member should review your GitHub submission if you are in a Team of Two. Make sure you both agree that the project is ready. In a prior semester, a team of four was upset that their team grade was lower than expected because the team member who handled the submission could have done a better job. Never let a teammate's lack of motivation or capability impact your success, even if that means you must do more work than you consider fair.
+
+## Errors and/or Inconsistencies in these Documents
+
+I have made this document as complete, consistent, accurate, and as approachable as time permitted.
+
+If there is an error, or you suspect there is an error, let me know, and I will correct the problem. I am *not* trying to trick you or confuse you. Large technical documents are difficult to keep perfectly correct and internally consistent,
+
+Thank you for your help in this matter.
