@@ -110,7 +110,7 @@ Your choice of languages, server architectures, and test runners includes:
    -  ASP.NET Blazor Server + NUnit + Playwright 
       *Use Interactive Server Mode, not WASM or static SSR*
    -  ASP.NET MVC + NUnit + Playwright
--  Java / Version 17 or newer
+-  Java / Version 21 or newer
    -  Spring Boot  + JUnit + Playwright
       *Use Maven 3.5+, Spring Initializer, and the instructions at https://spring.io/guides/gs/spring-boot*
 -  Python / Version 3.14 or newer

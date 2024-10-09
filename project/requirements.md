@@ -14,7 +14,7 @@
 -  [Project Architecture Requirements](#project-architecture-requirements)
 -  [Package Management Requirements](#package-management-requirements)
 -  [Application Structure Requirements](#application-structure-requirements)
--  [Calculator Engine Requirements](#calculator-engine-requirements)
+-  [Calculator Logic Requirements](#calculator-logic-requirements)
 -  [Web Application Requirements](#web-application-requirements)
 -  [Visual Design Requirements](#visual-design-requirements) 
 -  [Unit Test Plan and Coverage Requirements](#unit-test-plan-and-coverage-requirements)
@@ -146,7 +146,9 @@ You have several options for managing your `git` repository:
 
 -  [Work from the command line.](https://www.geeksforgeeks.org/using-git-on-commandline/)
 -  [Use GitHub Desktop.](https://desktop.github.com/)
--  [Use GitKraken.](https://www.gitkraken.com/)
+- [Use GitKraken.](https://www.gitkraken.com/) 
+
+  *This is my preferred tool. The full version requires a license. The free version works fine for most student projects.*
 -  [Use your JetBrains IDE's Git Tool Window.](https://www.jetbrains.com/guide/java/tutorials/creating-a-project-from-github/the-git-tool-window/)
 
 ## Documentation Requirements
@@ -172,7 +174,6 @@ Your project's README.md file will contain the following sections:
 -  Executing Unit Tests
 -  Reviewing Unit Test Coverage
 -  Executing End-To-End Tests
--  OPTIONAL EXTRA CREDIT: [Static Analysis](#static-analysis-via-sonarqube)<br>*Do not include if extra credit not performed.*
 -  Final Video Presentation
 
 Order your README.md file according to the section order shown above.
@@ -214,26 +215,29 @@ You are encouraged to update the architecture diagram to better match your proje
 @startuml
 allowmixing
 
-package "Calculator Engine Package / Namespace" #lightblue
+package "Calculator Logic Module" #lightblue
 {
-    class CalculatorEngine {
-        + Add(float inputA, float inputB) float
-        + OtherTwoOperandMethods(...)
+    class DescriptiveStatistics {
+        + ValidationFunctions
+        + LogicFunctions
+    }
 
-        + Sin(float inputA) float
-        + OtherSingleOperandMethods(...)
+    class LinearRegression {
+        + ValidationFunctions
+        + LogicFunctions
     }
 
 }
 
-package "Calculator Engine Unit Tests via JUnit, NUnit, etc." #lightyellow
+package "Calculator Logic Unit Tests via JUnit, NUnit, or Pytest" #lightyellow
 {
-  class CalculatorEngineUnitTests {
-    + CalculatorEngine_AddsAandB_ReturnsSum()
-    + CalculatorEngine_DividesAand0_ReturnsNotANumber()
+  class LogicUnitTests {
+    + DescriptiveStatistics_AcceptsValueMeanStdDev_ReturnsZScore()
+    + LinearRegression_EmptyList_ReturnsError()
   }
 
-  CalculatorEngineUnitTests --> CalculatorEngine
+  LogicUnitTests --> DescriptiveStatistics
+  LogicUnitTests --> LinearRegression
 
 }
 
@@ -245,14 +249,15 @@ package "Calculator Web Server App" #lightblue
 
    Controllers --> Views
    Controllers --> Models
-   Controllers --> CalculatorEngine
+   Controllers --> DescriptiveStatistics
+   Controllers --> LinearRegression
 }
 
 package "Calculator End-To-End Tests via Playwright" #lightyellow {
   class CalculatorEndToEndTests {
-     + CalculatorUI_AddsAandB_DisplaysCorrectValue()
-     + CalcuatlorUI_DividesAand0_DisplaysNotANumber()
-     + CalculatorUI_ClicksClear_ResetsInterface()
+     + CalculatorUI_ListofValues_CalculatesMean()
+     + CalcuatlorUI_EmptyListOfValues_DisplaysError()
+     + CalculatorUI_InvalidListOfValues_DisplaysError()
   }
 
     CalculatorEndToEndTests --> Controllers : HTTP Call via\n Headless Browser
@@ -377,33 +382,33 @@ Include a link to your final video presentation. If the file is checked into you
 
 ## Project Architecture Requirements
 
-Your application will separate calculation logic from web logic. This will simplify unit testing, help your code achieve the single responsibility principle, and decouple the logic engine from the user interface. The following high-level component layout shows the modules you will implement and their relationship to one another.
+Your application will separate calculation logic from web logic. This will simplify unit testing, help your code achieve the [single responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle), and decouple the logic mechanisms from the user interface. The following high-level component layout shows the modules you will implement and their relationship to one another.
 
-[![image-20240128222116749](requirements.assets/image-20240128222116749.png)](https://www.plantuml.com/plantuml/uml/VL9DQzj04BthLmp99IQnstCf9R9II0fnJAsabq9Oxqxa9QDTiHzMGyb_hwQAy1fRteFNmxptTkOzNViWN8WrPOB8jhN-eqsLPOsGhw92E2i4oKWYM0VVJQKDmlAZzGaMeaRV8V4CpabNcx2cYDdV3BeZINWFE_O7kM_okOHSgOiNiYA0DaqC-HKarNpILmd-8MpGbQrzQD09e-unRApo5xFPR98bi9KsUx8ZGXsi8ZocnQ3tB7i_wSAZqG5AzC73LWlumVKLBFeBWvmDdhmX-ygkZ7Z2b5weD-Vo0F7SEULpOTJy-IU6w8nVnVfYCeQ-qLkjy3_Xyq1Os90lOhr6npnU3quCCfr-E-YE6l8Brx12jqK7UTCSVWhzrlTM8VbT_QInJSh2ck0i4JhFewKrJpF03nk3RjePMM0qK3KjxRIxaZoN9DvQnulivmZ7SrIbvPyanRrW7k-I26-qRpfrNrZdK8OdGH4vb8Ga0Z5fFyc1bqPvzAc2j7pr1Q5mNVmUWxyp0TsBaBWB7qRdP-zIBx_0RLak6KvipMy3joWKeVSmTxRrwDXPIJOgE4zSscY58BMJXBrd2G66V_3rn7EiUur6nPh-0G00)
+![](https://www.plantuml.com/plantuml/svg/fLDHQzim47xthpZQbuqiVs2CqQx9Q4UwXSRjO0oCAjzSiOjaTBApCFhVfyC8QwcJb_eXod7VVNVtwTC51-L3jwL24RdTrlmnjYcALkdVga4ukrAaErB1ULYvncYuTNL7U0RdP9gdy4WT5dyBY9ycnGmBPErD6qoFcw22uM0qmu2GRmOFYamTCyv-xgoMayViqEJ_n7EHyQ-CHUNliF78726lfdu-jUozDG5AvC3G6mLV97u7NuSZejRx49D9Z3sAX2976bP812mKIONPj4RLfTRO1euxT7YBocv2lS2-kiFGUSi_DjfvVFDse7WXGxNSjc6_YbIfOEczyu8Vz3iOPJx_E3t6DFImtL7PlkCZRD3twE6oRGzTadI97aBYCNumkCl2AsU3TqJeMKRFOvacmLyc4c-UERrh3fpUzCYYIrlFIpUFH-QFDQdzpiUD3om1eoL6YbXQEld9l06p371_Kyc5kbzY2UGgPP357dArMOKA91MZ3xwbieNXDiwL337PvyRsydHErwM7U6m5aI-NyprSb-LQu2Jg_BHmZQecP8PFtkqOlOYhoNKrd6T2FPaQGHkl2GVPiW98_-33YNQHzm9jtMtf7m00)
 
-You must carefully organize your code to achieve this architecture. In particular, you *cannot* [closely couple the calculator logic with the calculator UI logic](https://uxdesign.cc/separating-business-and-ui-logic-the-proper-way-a58a64529333). For example, if you perform a calculation in the Calculator Web Server App's controllers, models, or views, you are doing it wrong. The controller class in the Calculator Web Server App requests calculations from the Calculator Engine classes.
+You must carefully organize your code to achieve this architecture. In particular, you *cannot* [closely couple the calculator logic with the user interface logic](https://uxdesign.cc/separating-business-and-ui-logic-the-proper-way-a58a64529333). For example, if you perform a calculation in the Calculator Web Server App's controllers, models, or views, you are doing it wrong. The controller class in the Calculator Web Server App requests calculations from the Calculator Logic classes.
 
 **preq-TECHNICAL-DESIGN-1**
 
-The **Calculator Engine** module accepts values from the web server, performs the calculation logic, and returns floating-point values. This module does not perform any user interface functions.
+The **Calculator Logic** module accepts values from the web server, performs the calculation logic, and returns floating-point values. This module does not perform any user interface functions.
 
 **preq-TECHNICAL-DESIGN-2**
 
-The **Calculator Web Server App** module references the **Calculator Engine** module. The **Calculator Web Server App** generally follows the [MVC pattern](https://www.geeksforgeeks.org/mvc-framework-introduction/) to generate the user interface (Views), calls the Calculator Engine (via the Controller), and returns results to the user's browser (by combining a Model into a View for transformation into HTML):
+The **Calculator Web Server App** module references the **Calculator Logic** module. The **Calculator Web Server App** generally follows the [MVC pattern](https://www.geeksforgeeks.org/mvc-framework-introduction/) to generate the user interface (Views), calls the Calculator Logic (via the Controller), and returns results to the user's browser (by combining a Model into a View for transformation into HTML):
 
 ![MVC Pattern, Geeks for Geeks](https://media.geeksforgeeks.org/wp-content/uploads/20220224160807/Model1.png)
 
 **preq-TECHNICAL-DESIGN-3**
 
-The **Calculator Engine Unit Tests** only reference the **Calculator Engine** module. Your unit tests *will not not test this project's Calculator Web Server App*. You will use NUnit (C#), JUnit (Java), or `pytest` (Python) to write your unit tests.
+The **Calculator Logic Unit Tests** only reference the **Calculator Logic** module. Your unit tests *will not not test this project's Calculator Web Server App*. You will use NUnit (C#), JUnit (Java), or `pytest` (Python) to write your unit tests.
 
 **preq-TECHNICAL-DESIGN-4**
 
-The **Calculator End-to-End Tests** connect to your **Calculator Web Server App** and test the user interface end-to-end (which includes calling the Calculator Engine via the web server's controller). You will use [Playwright](https://playwright.dev/) to write your end-to-end (also called e2e) tests.
+The **Calculator End-to-End Tests** connect to your **Calculator Web Server App** and test the user interface end-to-end (which includes calling the Calculator Logic via the web server's controller). You will use [Playwright](https://playwright.dev/) to write your end-to-end (also called e2e) tests.
 
 ## Package Management Requirements
 
-Package managers simplify sharing code. Almost all languages implement one or more package management tools.
+[Package managers simplify sharing code.](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) Almost all languages implement one or more package management tools.
 
 **preq-PACKAGES-1.C#**
 
@@ -432,14 +437,14 @@ You will use the PIP package manager to install the `pytest` and Playwright test
 
 You will choose one of the following languages, server architectures, and test runners:
 
--  **C#**
+-  C# / .NET Core 8 or newer (do not choose .NET Framework)
+   -  ASP.NET Blazor Server + NUnit + Playwright 
+      *Use Interactive Server Mode, not WASM or static SSR*
    -  ASP.NET MVC + NUnit + Playwright
-   -  ASP.NET Blazor Server + NUnit + Playwright
--  **Java**
-   -  Spring MVC + JUnit + Playwright
-   -  Struts + JUnit + Playwright
-   -  Grails + JUnit + Playwright
--  **Python**
+-  Java / Version 21 or newer
+   -  Spring Boot  + JUnit + Playwright
+      *Use Maven 3.5+, Spring Initializer, and the instructions at https://spring.io/guides/gs/spring-boot*
+-  Python / Version 3.14 or newer
    -  Flask + Pytest + Playwright
 
 **preq-APPLICATION-STRUCTURE-2**
@@ -473,7 +478,7 @@ Your Java project will follow this application structure using [Maven and `pom.x
 
    -  **src**<br>Place your root Maven `pom.xml` file here. Each subfolder will also need a `pom.xml` file.
 
-      -  **web**<br>Your calculator web server app goes here. It references the `calculator-engine` module.
+      -  **web**<br>Your calculator web server app goes here. It references the `calculator-logic` module.
          -  **src**
             -  **main**
                -  **java**
@@ -481,11 +486,11 @@ Your Java project will follow this application structure using [Maven and `pom.x
                -  **webapp**
                   -  **WEB-INF**
                      -  [web.xml](https://cloud.google.com/appengine/docs/legacy/standard/java/config/webxml)
-      -  **calculator-engine**<br>Your calculator logic goes here. It does not contain any user interface logic. It is referenced by your web server module.
+      -  **calculator-logic**<br>Your calculator logic goes here. It does not contain any user interface logic. It is referenced by your web server module.
          -  **src**
             -  **main**
                -  **java**
-      -  **tests**<br>This is your JUnit unit test package. It references the `calculator-engine` module. All clear box unit tests to achieve 100% coverage of `calculator-engine` will be in this  module.
+      -  **tests**<br>This is your JUnit unit test package. It references the `calculator-logic` module. All clear box unit tests to achieve 100% coverage of `calculator-logic` will be in this  module.
          -  **src**
             -  **main**
                -  **java**
@@ -504,7 +509,7 @@ Your Python project will follow thiCas application structure:
       -  **calcuator_engine**<br>
          -  `__init__.py`
          -  This folder contains your calculator logic. It does not contain any user interface logic. It is referenced by your web app.
-      -  **tests**<br>This folder will use `pytest` and reference `calculator-engine` to reach 100% clear box unit test coverage.
+      -  **tests**<br>This folder will use `pytest` and reference `calculator-logic` to reach 100% clear box unit test coverage.
          -  `__init__.py`
          -  `pytest` unit test files
       -  **e2e**<br>This folder will use Playwright and a headless browser to test your web interface.
@@ -513,13 +518,13 @@ Your Python project will follow thiCas application structure:
    
    *[What is the significance of`__init__.py` in a Python project?](https://www.python-engineer.com/posts/init-py-file/)*
 
-## Calculator Engine Requirements
+## Calculator Logic Requirements
 
-**preq-ENGINE-1**
+**preq-LOGIC-1**
 
 All calculator logic will be in its own folder, module, or namespace. See [Application Architecture Requirements](#application-architecture-requirements) for specific instructions how to structure your overall project. The calculator logic module will not contain *any* user interface logic.
 
-**preq-ENGINE-2**
+**preq-LOGIC-2**
 
 All operations will use floating point math - *not integers*. Input A, Input B, and the calculation result will be floating point values. In C# and Java, use the `double` type.
 
@@ -528,32 +533,25 @@ To simplify requirements tracability (and grading), please include the requireme
 For example:
 
 ```html
-public double Add(double inputA, double inputB) {
-	//preq-ENGINE-3
+public CalculationResult ComputeMean(List<double> values) {
+	//preq-LOGIC-3
 ...
 ```
 
-Following are the mathematical operations you must implement:
+Following are the mathematical operations you must implement and the UI button (in the web server view) that executes the operation:
 
-| Requirement #  | Operation           | Button   | Inputs                            | Returns                                               | Example                                                      | Notes                                                        |
-| -------------- | ------------------- | -------- | --------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| preq-ENGINE-3  | Add                 | A + B    | A, B                              | A plus B                                              | 5.5 + -3.15 = 2.35                                           |                                                              |
-| preq-ENGINE-4  | Subtraction         | A - B    | A, B                              | A minus B                                             | 27.93 - 4 = 23.93                                            |                                                              |
-| preq-ENGINE-5  | Multiplication      | A * B    | A, B                              | A times B                                             | 5 * 7.1 = 35.5                                               |                                                              |
-| preq-ENGINE-7  | Division            | A / B    | A, B                              | A divided by B                                        | 3.0 / 9.0 = .33333333                                        | The following values return return an error:<br />- B (denominator) equal to 0 |
-| preq-ENGINE-8  | Equals              | A == B   | A, B                              | 1 when equivalent to 8 precision points. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 | Comparison is to 8 decimal points. Thus, 0.333333331 and 0.333333332 are considered equal. See the Equals method in the [Coverage Demo](https://github.com/jeff-adkisson/swe-3643-spring-2024/blob/master/examples/coverage_demo/MathLibrary/BasicFloatingPointOperations.cs) from Module 2 for an example how to properly perform an equality operation on floating point values. |
-| preq-ENGINE-9  | Raise to Power      | A ^ B    | A, B                              | A raised to the power of B                            | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |                                                              |
-| preq-ENGINE-10 | Logarithm of number | A log B  | A, B                              | Exponent of logarithm A at base B                     | 8 log 2 = 3,<br />25 log 5 = 2                               | The following values return return an error:<br />- Values of A less than or equal to 0<br />- Values of B equal to 0 |
-| preq-ENGINE-11 | Root of number      | A root B | A, B                              | Bth root of A                                         | 8 root 3 = 2,<br />25 root 2 = 5                             | The following values return return an error:<br />- Values of B equal to 0 |
-| preq-ENGINE-12 | Factorial of number | A !      | A<br />*round decimal to integer* | A * (A-1) * (A - ...) * 2 * 1                         | 5 = 120,<br />-5 = -120<br />0 = 1                           | By convention, 0 returns 1.                                  |
-| preq-ENGINE-13 | Sine of A           | sin A    | A                                 | sin(A)                                                | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |                                                              |
-| preq-ENGINE-14 | Cosine of A         | cos A    | A                                 | cos(A)                                                | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |                                                              |
-| preq-ENGINE-15 | Tangent of A        | tan A    | A                                 |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |                                                              |
-| preq-ENGINE-16 | Reciprocal of A     | 1 / A    | A                                 | 1 divided by A                                        | 1 / 8 = 0.125<br />1/ -4 = -0.25                             | The following values return return an error:<br />- Values of A equal to 0 |
+| Requirement                                                  | UI Button                                                    | Inputs                                                       | Returns                                                      | Example                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **preq-LOGIC-3**<br />Compute sample standard deviation      | **Compute Sample Standard Deviation  \| one value per line** | List of **one** or more numeric values, one value per line<br /><br />Ignore empty lines and spaces<br /><br /><br />Error when:<br />- any line contains a non-numeric value (such as "123X" or "123,124")<br />- there is not a single valid numeric value | Sample standard deviation of values in list                  | 9<br/><br/>6<br/><br/>8<br/><br/>5<br/><br/>7<br /><br />Returns<br />1.5811388300841898 |
+| **preq-LOGIC-4**<br />Compute population standard deviation from a list of values | ****Compute Population Standard Deviation  \| one value per line** | List of **two or more** numeric values, one value per line<br /><br />Ignore empty lines and spaces<br /><br /><br />Error when:<br />- any line contains a non-numeric value (such as "123X" or "123,124")<br />- there are fewer than two valid numeric values | Population standard deviation of values in list              | 9<br/><br/>6<br/><br/>8<br/><br/>5<br/><br/>7<br /><br />Returns<br />1.4142135623731 |
+| **preq-LOGIC-5**<br />Compute mean (average) from a list of values | ****Compute Mean  \| one value per line**                    | List of **one or more** numeric values, one value per line<br /><br />Ignore empty lines and spaces<br /><br /><br />Error when:<br />- any line contains a non-numeric value (such as "123X" or "123,124")<br />- there is not a single valid numeric value | Mean (average) of values in list                             | 9<br/><br/>6<br/><br/>8<br/><br/>5<br/><br/>7<br /><br />Returns<br />35 |
+| **preq-LOGIC-6**<br />Compute a z-score from a value, mean, and standard deviation | ****Compute Z Score  \| value, mean, stdDev on one line**    | **Three and only three numeric values** separated by commas on a single line<br /><br />Error when:<br /><br />- the first line does not contain three and only three numeric values separated by commas (ignore spaces)<br /><br />- there is more than one line of values<br />- the standard deviation value is zero (division by zero) | Z-score for a value (1st value) using the mean (2nd value) and standard deviation (3rd value) | 11.5,7,1.5811388300841898<br <br /><br />Returns<br />2.846049894151541 |
+| **preq-LOGIC-7**<br />Compute a single variable linear regression formula from a list of X,Y pairs | **Compute Single Linear Regression Formula  \| one x,y pair per line** | List of **one or more** X,Y comma-separated number pairs (one X,Y pair per line).<br /><br />Ignore empty lines and spaces<br /><br />Error when:<br />- any line does not contain exactly two valid numeric values separated by a comma (ignore spaces)<br />- there is not a single X,Y pair | Regression formula in the form y = mx + b                    | 1.47,52.21<br/><br/>1.5,53.12<br/><br/>1.52,54.48<br/><br/>1.55,55.84<br/><br/>1.57,57.2<br/><br/>1.6,58.57<br/><br/>1.63,59.93<br/><br/>1.65,61.29<br/><br/>1.68,63.11<br/><br/>1.7,64.47<br/><br/>1.73,66.28<br/><br/>1.75,68.1<br/><br/>1.78,69.92<br/><br/>1.8,72.19<br/><br/>1.83,74.46,<br /><br />Returns<br />y = 61.272186542107434x + -39.061955918838656 |
+| **preq-LOGIC-8**<br />Predict a Y value using the X, M (slope), and B (intercept) values of a single variable regression formula | **Predict Y from Linear Regression Formula  \| x, m, b on one line** | **Three and only three** numeric values separated by commas on a single line<br /><br />Error when:<br /><br />- the first line does not contain three and only three numeric values separated by commas (ignore spaces)<br /><br />- there is more than one line of values | Prediction for y value when x (first value) is multiplied by m (slope, second value) and added to the intercept (b, third value) | 1.535,61.272186542107434, -39.061955918838656<br /><br />Returns<br />y = 54.990850423296244 |
 
 #### Notes
 
-1.  Implementing these functions will be simple (this is not a math class). Use your language's built-in math library:
+1.  Implementing these functions will is not complex simple (this is not a math class). Use your language's built-in math library for operations such as computing the square root of the variance:
 
     -  [C# System.Math](https://learn.microsoft.com/en-us/dotnet/api/system.math?view=net-8.0)
 
@@ -573,7 +571,7 @@ I recommend using a friendly [CSS framework for layout](https://getbootstrap.com
 
 **preq-WEB-APPLICATION-2**
 
-Your web application's user interface will provide a button and call to every logic operation in the [Calculator Engine](#calculator-engine-requirements) project/module. Your web application will handle both valid and error responses from the calculator logic. 
+Your web application's user interface will provide a button and call to every logic operation in the [Calculator Logic](#calculator-logic-requirements) project/module. Your web application will handle both valid and error responses from the calculator logic. 
 
 **preq-WEB-APPLICATION-3**
 
@@ -902,46 +900,6 @@ public void CalculatorWebUi_PageTitle_IsCalculator()
 
 2.  Your Playwright tests will fail if your web server app is not running. You will see an error similar to the following:<br>![image-20240206130023125](requirements.assets/image-20240206130023125.png)
 3.  Failing tests show you what was expected and what the application returned.<br>![image-20240206125613989](requirements.assets/image-20240206125613989.png)
-
-## Static Analysis via SonarQube
-
-This section is ***optional***. You can complete it for 5% extra credit.
-
-Extra credit criteria:
-
--  You *must* complete every other section of the project to be eligible for extra credit in this section. Do not skip one section with the intention of making up for the loss with this section.
--  You must complete all Static Analysis requirements to receive extra credit. This section is all or nothing.
-
-#### What is Static Analysis?
-
-[Static analysis is a Quality Assurance methodology to improve code quality and spot security issues before deployment.](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) Static analysis can reveal security issues, spot code that affects reliability (such as not releasing memory properly), and suggest more maintainable coding patterns.
-
-There are many static analysis tools on the market. My company uses SonarCloud, the hosted version of SonarQube. We have found it helpful because it works with many languages and is aware of changes to your source repository, helping you spot issues before they go to production rather than after. Note that some of the issues these tools identify can be a distraction or even incorrect (false positives). Do not accept the results of a static analyzer without a bit of investigation whether the suggestion is right for your project.
-
-This extra credit section will introduce you to static analysis, but it is not an exhaustive topic exploration. Once you see the type of issues a static analyzer returns, (hopefully) you will appreciate its value and add the technique to your code-quality toolbox.
-
-#### Static Analysis Requirements
-
-**preq-STATIC-ANALYSIS-1**
-
-Install [SonarQube Community Edition](https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/) on your machine. 
-
--  [Install Docker.](https://docs.docker.com/engine/install/)
--  [Install SonarQube Community Edition.](https://docs.sonarsource.com/sonarqube/latest/try-out-sonarqube/)
-
-**preq-STATIC-ANALYSIS-2**
-
-Setup a SonarQube project and perform static analysis on your project. Follow the steps in this tutorial.
-
-https://blog.stackademic.com/sonarqube-community-edition-comprehensive-guide-for-a-free-personal-setup-a980c47bd5dc
-
-**preq-STATIC-ANALYIS-3**
-
-Add a short walkthrough of your SonarQube analysis results to your Final Presentation as Section 8. Do you see any value in this type of information?
-
-**preq-STATIC-ANALYSIS-4**
-
-Add a Static Analysis H2 section to your README.md (and Table of Contents) to indicate to me that you are eligible for the 5% extra credit. In the section, include a screenshot of your SonarQube issues page.
 
 ## Final Presentation Requirements
 
