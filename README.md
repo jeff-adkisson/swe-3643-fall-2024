@@ -22,6 +22,7 @@ This repository contains project information and code samples for KSU SWE 3643: 
 - [Overview](project/README.md)
 - [Requirements](project/requirements.md)
 - [Grading Rubric](project/grading-rubric.md)
+- [User Interface Mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80)
 
 #### Homework (not graded, but *highly highly highly* recommended you perform it)
 

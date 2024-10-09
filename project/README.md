@@ -5,6 +5,7 @@
 -  [Project Overview](#project-overview)
 -  [Grading Rubric](grading-rubric.md)
 -  [Requirements](requirements.md)
+-  [User Interface Mockup](https://app.moqups.com/MvLts3wDDVQ8TNQBIdQN5nOCilbNhjYo/view/page/ac244bb80)
 
 # Project Overview
 
