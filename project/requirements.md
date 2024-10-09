@@ -464,9 +464,9 @@ Your C# project will follow this application structure:
 
 -  **REPOSITORY ROOT**<br>Your `README.md` file is here.
    -  **src**<br>Name your solution `Calculator.sln` and place it in the `src` folder.
-      -  **CalculatorWebServerApp** project<br>This is your web server application. It will reference the **CalculatorEngine.csproj** project.
-      -  **CalculatorEngine** project<br>This is the calculator logic project. It does not contain any user interface logic. It is referenced by your `CalculatorWebServerApp.csproj` web server app project.
-      -  **CalculatorEngineUnitTests** project <br>This is your NUnit unit test project. It references your **CalculatorEngine.csproj** project. All clear box unit tests to achieve 100% coverage of **CalculatorEngine** will be in this project.
+      -  **CalculatorWebServerApp** project<br>This is your web server application. It will reference the **CalculatorLogic.csproj** project.
+      -  **CalculatorLogic project<br>This is the calculator logic project. It does not contain any user interface logic. It is referenced by your `CalculatorWebServerApp.csproj` web server app project.
+      -  **CalculatorLogicUnitTests** project <br>This is your NUnit unit test project. It references your **CalculatorLogic.csproj** project. All clear box unit tests to achieve 100% coverage of **CalculatorLogic** will be in this project.
       -  **CalculatorEndToEndTests** project<br>This is your Playwright test project. It references the NUnit and Playwright Nuget packages. All end-to-end tests will be in this project. This project will use Playwright and a headless browser to test your web interface.
 
 **preq-APPLICATION-STRUCTURE-3.Java**
@@ -505,7 +505,7 @@ Your Python project will follow thiCas application structure:
 -  **REPOSITORY ROOT**<br>Your `README.md` file is here.
    -  **src**<br>Place your `requirements.txt` file in `src` to install your application dependencies, such as Flask, pytest, and Playwright.
       -  **web**<br>Contains your Flask web server app. [Follow the Flask conventions for structuring this directory](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/).
-      -  **calcuator_engine**<br>
+      -  **calcuator_logic**<br>
          -  `__init__.py`
          -  This folder contains your calculator logic. It does not contain any user interface logic. It is referenced by your web app.
       -  **tests**<br>This folder will use `pytest` and reference `calculator-logic` to reach 100% clear box unit test coverage.
@@ -730,11 +730,11 @@ Following are the minimum unit tests you must include:
 | preq-UNIT-TEST-19 | Reciprocal of A                | 1 / A    | A                 | 1 divided by A                                        | 1 / 8 = 0.125<br />1 / -4 = -0.25                            |
 | preq-UNIT-TEST-20 | Reciprocal of A ERROR          | 1 / A    | A                 | 1 divided by A where A = 0                            | 1/ 0 = ERRROR                                                |
 
-#### 100% Unit Test Coverage of CalculatorEngine
+#### 100% Unit Test Coverage of CalculatorLogic
 
 **preq-UNIT-TEST-21**
 
-Your CalculatorEngine module must have 100% unit test coverage of all methods and paths.
+Your CalculatorLogic module must have 100% unit test coverage of all methods and paths.
 
 You can calculate coverage statistics in Intellij, Rider, or Pycharm.
 
@@ -742,7 +742,7 @@ Coverage statistics look similar to the following example:
 
 <img src="requirements.assets/image-20240204220021325.png" alt="image-20240204220021325" style="zoom: 50%;" />
 
-Anywhere you see something in your CalculatorEngine with less than 100% coverage, write a unit test.
+Anywhere you see something in your CalculatorLogic with less than 100% coverage, write a unit test.
 
 #### Unit Test Naming Conventions and Structure
 
@@ -783,7 +783,7 @@ public void Add_TwoFloatingPointValues_ReturnsSum()
     const double expected = 4.25;
 
     // Act
-    var result = CalculatorEngine.Add(a, b);
+    var result = CalculatorLogic.Add(a, b);
 
     // Assert
     Assert.Equal(expected, result, 8); //where 8 = points of precision
@@ -943,7 +943,7 @@ Switch to your IDE and briefly discuss the structure of two unit tests:
 
 **preq-PRESENTATION-7** Section 5, 100% unit test coverage
 
-Switch to your IDE and demonstrate generating code coverage statistics for your CalculatorEngine project. Your coverage should be 100%. It will look similar to the following example:
+Switch to your IDE and demonstrate generating code coverage statistics for your CalculatorLogic project. Your coverage should be 100%. It will look similar to the following example:
 
 <img src="requirements.assets/image-20240204220021325.png" alt="image-20240204220021325" style="zoom: 50%;" />
 
