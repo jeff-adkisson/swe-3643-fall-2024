@@ -137,7 +137,7 @@ Your Team Repository will add a `.gitignore` file to the root of the repository.
 
 **preq-SOURCE-4.Python**
 
-[Use this `.gitignore` file for PyCharm and Python development.](https://gist.github.com/rask004/4c322384aa6012d6c5a7178071d3c8fb) Extend the file as necessary to ignore additional file types not needed in your source repository.
+[Use this `.gitignore` file for PyCharm and Python development.](https://gist.github.com/MOOOWOOO/3cf91616c9f3bbc3d1339adfc707b08a) Extend the file as necessary to ignore additional file types not needed in your source repository.
 
 #### Managing Your `git` Repo
 
@@ -706,29 +706,16 @@ For example:
 ...
 ```
 
-Following are the minimum unit tests you must include:
+Following are the minimum unit tests you must include (you may need more to achieve 100% coverage):
 
-| Requirement #     | Operation                      | Button   | Inputs            | Returns                                               | Example                                                      |
-| ----------------- | ------------------------------ | -------- | ----------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
-| preq-UNIT-TEST-2  | Add                            | A + B    | A, B              | A plus B                                              | 5.5 + -3.15 = 2.35                                           |
-| preq-UNIT-TEST-3  | Subtraction                    | A - B    | A, B              | A minus B                                             | 27.93 - 4 = 23.93                                            |
-| preq-UNIT-TEST-4  | Multiplication                 | A * B    | A, B              | A times B                                             | 5 * 7.1 = 35.5                                               |
-| preq-UNIT-TEST-5  | Division                       | A / B    | A, B              | A divided by B                                        | 3.0 / 9.0 = .33333333                                        |
-| preq-UNIT-TEST-6  | Division ERROR                 | A / B    | A, B              | Error                                                 | 3.0 / 0.0 = error                                            |
-| preq-UNIT-TEST-7  | Equals                         | A == B   | A, B              | 1 when equivalent to 8 precision points. 0 otherwise. | 0.333333== 0.333333 = 1,<br />0.33333333== 0.33333334 = 0,<br />0.333333331== 0.333333332 = 1 |
-| preq-UNIT-TEST-8  | Raise to Power                 | A ^ B    | A, B              | A raised to the power of B                            | 2 ^ 3 = 8, <br />5 ^ 2 = 25,<br />5 ^ -3 = 0.008             |
-| preq-UNIT-TEST-9  | Logarithm of number            | A log B  | A, B              | Exponent of logarithm A at base B                     | 8 log 2 = 3,<br />25 log 5 = 2                               |
-| preq-UNIT-TEST-10 | Logarithm of number ERROR 1    | A log B  | A, B where A <= 0 | Error                                                 | 0 log 2 = error,<br />-2 log 2 = error                       |
-| preq-UNIT-TEST-11 | Logarithm of number ERROR 2    | A log B  | A, B where B = 0  | Exponent of logarithm A at base B                     | 8 log 0 = error                                              |
-| preq-UNIT-TEST-12 | Root of number                 | A root B | A, B              | Bth root of A                                         | 8 root 3 = 2,<br />25 root 2 = 5                             |
-| preq-UNIT-TEST-13 | Root of number ERROR           | A root B | A, B where B = 0  | Bth root of A                                         | 8 root 0 = error                                             |
-| preq-UNIT-TEST-14 | Factorial of number            | A !      | A                 | A * (A-1) * (A - ...) * 2 * 1                         | 5 = 120,<br />-5 = -120<br />0 = 1                           |
-| preq-UNIT-TEST-15 | Factorial of number CONVENTION | A !      | A                 | A * (A-1) * (A - ...) * 2 * 1                         | 0 = 1<br>By convention, 0 returns 1.                         |
-| preq-UNIT-TEST-16 | Sine of A                      | sin A    | A                 | sin(A)                                                | 360 = 0<br />-360 = 0<br />0 = 0,<br />1 = 0.0174524         |
-| preq-UNIT-TEST-17 | Cosine of A                    | cos A    | A                 | cos(A)                                                | 360 = 1<br /><br />-360 = 1<br />1= 0.99985                  |
-| preq-UNIT-TEST-18 | Tangent of A                   | tan A    | A                 |                                                       | 360 = 0<br />-360 = 0<br />1=0.0174551                       |
-| preq-UNIT-TEST-19 | Reciprocal of A                | 1 / A    | A                 | 1 divided by A                                        | 1 / 8 = 0.125<br />1 / -4 = -0.25                            |
-| preq-UNIT-TEST-20 | Reciprocal of A ERROR          | 1 / A    | A                 | 1 divided by A where A = 0                            | 1/ 0 = ERRROR                                                |
+| Requirement #     | Operation                                 | Tests Include...                                             |
+| ----------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| preq-UNIT-TEST-2  | Compute Sample Standard Deviation         | - Valid list of 1 or more samples<br />- List of all zeros<br />- Empty/Null list |
+| preq-UNIT-TEST-3  | Compute Population Standard Deviation     | - Valid list of 2 or more samples<br />- List of all zeros<br />- Empty/Null list<br /> - List with 1 sample |
+| preq-UNIT-TEST-4  | Compute Mean                              | - Valid list<br />- Empty list                               |
+| preq-UNIT-TEST-5  | Compute Z-Score                           | - Valid list of parameters<br />- Missing one or more parameters<br />- Mean=0 |
+| preq-UNIT-TEST-6  | Compute Single Linear Regression Equation | - Valid list of X,Y parameters<br />- Empty/Null list<br />- All X values are the same<br />- All Y values are the same<br />- All X,Y values are 0,0 |
+| preq-UNIT-TEST-7  | Predict Y from MX+B                       | - Valid list of parameters<br />- Missing one or more parameters |
 
 #### 100% Unit Test Coverage of CalculatorLogic
 
@@ -972,7 +959,7 @@ I suggest implementing your semester project in this order to achieve the highes
 
 1. Create your Calculator Logic module and the Mean method.
 
-2. Create your unit test module and implement the unit tests for Mean. This will help you structure how to return both valid conditions and error conditions. Instead of just returning a floating point result, you should return an object with multiple properties, such as:
+2. Create your unit test module and implement the unit tests for Mean. This will help you structure how to return both valid conditions and error conditions. Instead of returning a floating point result,  return an object with multiple properties that handles both success and failure conditions, such as:
 
    ```c#
    //C#
