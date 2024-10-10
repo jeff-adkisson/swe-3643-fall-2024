@@ -356,8 +356,6 @@ I have made this document as complete, consistent, accurate, and as approachable
 
 If there is an error, or you suspect there is an error, let me know, and I will correct the problem. I am *not* trying to trick you or confuse you. Large technical documents are difficult to keep perfectly correct and internally consistent,
 
-Thank you for your help in this matter.
-
 ## I Hope You Enjoy This Project
 
 This is the kind of work you will do in professional practice. Many of the projects you do at the University are trivial efforts with minimal architectural requirements. This project will give you a glimpse of what it is like to work on something with detailed requirements and carefully considered architectural instructions.

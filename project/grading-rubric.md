@@ -6,7 +6,9 @@
 
 ## Course Grade Policy
 
-**Your final course grade can only be one letter grade higher than your project.** If you do poorly on the project, you will do poorly overall.
+>  [!IMPORTANT]
+>
+> **Your final course grade can only be one letter grade higher than your project.** If you do poorly on the project, you will do poorly overall.
 
 ## Project Components
 
@@ -98,6 +100,3 @@ If you choose to drop sections, be sure the sections you submit are polished and
 I have made this document as complete, consistent, accurate, and as approachable as time permitted.
 
 If there is an error, or you suspect there is an error, let me know, and I will correct the problem. I am *not* trying to trick you or confuse you. Large technical documents are difficult to keep perfectly correct and internally consistent,
-
-Thank you for your help in this matter.
-

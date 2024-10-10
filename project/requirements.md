@@ -1050,10 +1050,19 @@ I suggest implementing your semester project in this order to achieve the highes
 
 13. Each team member should review your GitHub submission if you are in a Team of Two. Make sure you both agree that the project is ready. In a prior semester, a team of four was upset that their team grade was lower than expected because the team member who handled the submission could have done a better job. Never let a teammate's lack of motivation or capability impact your success, even if that means you must do more work than you consider fair.
 
+### Helpful Resources from Homework
+
+Homework 1, 2, and 3 were made to prepare you for the project. Review those.
+
+- [Homework 1](https://github.com/jeff-adkisson/swe-3643-fall-2024/blob/main/homework/homework-1.md)
+  [Example Solution C#](https://github.com/jeff-adkisson/swe-3643-fall-2024-homework/tree/main/homework-1/csharp/Homework1)
+- [Homework 2](https://github.com/jeff-adkisson/swe-3643-fall-2024/blob/main/homework/homework-2.md)
+  [Example Solution C#](https://github.com/jeff-adkisson/swe-3643-fall-2024-homework/tree/main/homework-2/csharp/Homework2)
+- [Homework 3](https://github.com/jeff-adkisson/swe-3643-fall-2024/blob/main/homework/homework-3.md)
+  [Example Solution](https://github.com/jeff-adkisson/swe-3643-fall-2024-homework/tree/main/homework-3/csharp/PlaywrightTests)
+
 ## Errors and/or Inconsistencies in these Documents
 
 I have made this document as complete, consistent, accurate, and as approachable as time permitted.
 
 If there is an error, or you suspect there is an error, let me know, and I will correct the problem. I am *not* trying to trick you or confuse you. Large technical documents are difficult to keep perfectly correct and internally consistent,
-
-Thank you for your help in this matter.
